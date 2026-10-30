@@ -44,3 +44,21 @@ history is the tamper log.
 - idrbtca.org.in apex: TCP timeout from both sandbox and ocitwo (Indian vantage) — not geo-fencing, host down/deaf. `praman.idrbtca.org.in` → 404, `idrbtca.org.in/crl_27B0.crl` → 403 (2026-10-30).
 - nicca.nic.in: TCP timeout from India; nic.in/nicca page has no cert links.
 - emsign.com marketing site redirects to Sectigo CertiNext branding; the live repository is repository.emsign.com (AIA `repository.emsign.com/certs/*.p7c`).
+## Docsign: certificates that sign government documents
+
+Track **document-signing trust anchors** for papers citizens rely on: eAadhaar PDFs (UIDAI, chains to CCA India), CoWIN certificates (MoHFW), DigiLocker-issued documents, ITR/Form-16 (ITD), EPFO, MCA company certificates, DigiLocker issuer signatures (API Setu / NeGD).
+
+What lives here (`docsign/`, `govt-apps/`):
+
+- `govt-apps/digilocker-android/2026-10-30/` — **13 endpoint-pin certs shipped inside the DigiLocker Android app** (com.digilocker.android, APKPure, fetched 2026-10-30). 20 unique certs: apisetu.gov.in, digilocker.gov.in, digitallocker.gov.in, dl6.in, ndma.gov.in pins **with full chains embedded in the PKCS#7 blobs** — including self-signed `emSign Root CA - G1` and `emSign Root TLS CA - G1`. Three certs are **byte-identical to the emSign repository corpus** (sha256-matched): EM DV TLS CA - G2A-1, emSign Root CA - G1, cross-signed emSign Root TLS CA - G1. This is hard evidence that India's flagship documents app pins eMudhra/emSign chains for its API traffic.
+- Check: `bash scripts/check_digilocker.sh` — re-fetches the xapk and diffs every pin hash against the snapshot (PIN ADDED/CHANGED/REMOVED).
+
+Why endpoint pins matter here: a pin swap is how a silent trust change would ship to every DigiLocker user. Diffing pins per app version catches it.
+
+### Docsign gaps (next to seed)
+
+- **UIDAI eAadhaar document-signing cert** — must be extracted from a real eAadhaar PDF (UIDAI publishes no standalone copy; offline-eKYC key pages 404 even from Indian vantage). Route: user drops an eAadhaar in Downloads; extract the signer cert locally; the PDF (PII) never enters the repo.
+- **CoWIN QR public key** — not in the verify page JS bundle; `cdn-api.co-vin.in/api/v2/auth/publicKey` 401s. Chase the Android verifier app.
+- **mAadhaar APK** — apkeep fetches returned empty (wrong package name or delisting); retry with correct package.
+- Server-certificate pins for other govt apps (UMANG, mParivahan, Ayushman) — same extraction pipeline as DigiLocker.
+- NIC CA (nicca.nic.in) root + subscriber CAs; IDRBT CA hierarchy (apex deaf, worth an RTI on who operates it now).
