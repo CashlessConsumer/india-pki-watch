@@ -1,57 +1,46 @@
-# cca-root-watch
+# india-pki-watch
 
-Tamper-evident snapshots of the Controller of Certifying Authorities (CCA,
-India) root CA certificates from https://cca.gov.in/root_certificate.html.
+Tamper-evident archive of India PKI trust anchors and the CAs that serve them.
+Every fetch is snapshotted with HTTP headers + SHA256SUMS, never edited after
+the fact. A re-issue that changes bytes under the same name shows up as a diff
+against git history. Desk: CyberOpsec. Repo: LogicIncZo/india-pki-watch.
 
-Context: the Oct 2026 eMudhra/emSign chain compromise made India's CA trust
-anchors first-class evidence. The `CCA India 2022` roots below are in current
-trust stores. This repo records exactly what cca.gov.in served on each
-snapshot date, so any silent re-issue (key rotation, re-issuance, quiet
-remediation) is detectable by diff — nothing gets memory-holed.
+## Sources
 
-## Snapshot 2026-10-30
-
-Fetched 2026-10-30 06:32 UTC from
-`https://cca.gov.in/cca/sites/default/files/files/<file>`; both files
-`Last-Modified: Wed, 17 Sep 2025 12:06:51 GMT`. See
-`2026-10-30-root-certs/` (raw certs, HTTP headers, page HTML, SHA256SUMS)
-and `notes/2026-10-30-cca-india-2022-root-snapshot.md`.
-
-| File | SHA256 (file as served) | Decoded identity |
+| Dir | What | Status |
 | --- | --- | --- |
-| `CCAIndia2022.cer` (1896 B) | `2427c86a7f7e7bbe1684b75cfe96537ab080d00b7d6acf0c4453b438f246e0ee` | Root CA, `CN=CCA India 2022`, serial `762433EBDB26765A8560CD0AA82FE117`, valid 2022-02-02→2042-02-02, RSA-4096/sha256, self-signed |
-| `CCAIndia2022SPL.cer` (1904 B) | `6e92017ece0e2e752a59b37c0ebf0fb958311cc585deda1fdf12790eb99b3caf` | Root CA, `CN=CCA India 2022 SPL`, serial `628281C6EEBEC73F78087E5FF58F49F4`, valid 2022-09-20→2042-09-20, RSA-4096/sha256, self-signed |
-
-Corresponding x509 (DER) fingerprints:
-`9A:3F:D3:17:67:98:E8:42:DD:CB:12:C2:62:F1:1C:FA:CC:A7:0A:8B:84:C6:EA:6F:DA:30:84:2A:95:A9:4C:D8`
-(2022) and
-`B7:24:68:9B:79:B2:EF:94:21:EF:8F:5C:C7:33:EB:09:38:51:B1:70:EE:71:51:77:00:5A:09:F2:26:D8:C9:1A`
-(2022 SPL).
-
-Known quirk (observed 2026-10-30): `CCAIndia2022SPL.cer` as served contains a
-stray blank line between the base64 body and the `END CERTIFICATE` marker, so
-`openssl x509 -in CCAIndia2022SPL.cer` refuses to parse it. The embedded DER
-is intact — extract with
-`awk '/BEGIN/{f=1;next}/END/{f=0}f' CCAIndia2022SPL.cer | tr -d '\r\n' | base64 -d | openssl x509 -inform DER -noout -text`.
-
-## Checking for silent re-issue
-
-```bash
-scripts/check.sh            # re-fetch both certs, sha256sum -c vs latest snapshot
-```
-
-On mismatch: the certs changed. `git log` the snapshot dirs for the
-last-known-good state, decode the new files (subject / serial / key /
-validity), commit a new dated snapshot dir, and characterise the change
-(same key re-issued? new key? new validity?). A `Last-Modified` newer than
-`2025-09-17 12:06:51 GMT` with unchanged bytes is also worth noting.
+| `cca-gov-in/` | CCA India 2022 root + SPL as published on cca.gov.in/root_certificate.html | watching (weekly) |
+| `emsign-repository/` | Full 116-cert corpus from repository.emsign.com (emSign/eMudhra; roots incl. incident-relevant `emSign ECC Root CA - G3`, `emSign Root TLS CA - G3`, cross-signs, EM DV/OV/EV TLS intermediates incl. the one serving .bank.in) | watching (weekly) |
+| `idrbt-ca/` | IDRBT CA — no fetchable root found; infra findings recorded | findings only, 2026-10-30 |
+| `nic-ca/` | NIC CA — no public repository endpoint located | candidate, not seeded |
 
 ## Layout
 
-- `20YY-MM-DD-root-certs/` — one dated snapshot per fetch: `.cer` files as
-  served, raw response headers, page HTML, `SHA256SUMS.txt`
-- `notes/` — per-snapshot write-ups
-- `scripts/check.sh` — re-fetch + verify against latest snapshot
+```
+<source>/<YYYY-MM-DD>-<snapshot>/
+  *.crt|*.cer        files as served (bytes preserved)
+  headers_*.txt      per-file response headers (Last-Modified/ETag)
+  inventory.json     publisher-declared fingerprints (emSign)
+  SHA256SUMS.txt     manifest covering the whole snapshot
+```
 
-Certs and page content are public records of cca.gov.in; snapshots are for
-verification and research.
+Rule: snapshots are immutable. A change = new dated dir + one commit. Git
+history is the tamper log.
+
+## Scripts
+
+- `scripts/check_ccaindia.sh` — re-fetch CCA roots, compare bytes + Last-Modified vs latest snapshot.
+- `scripts/check_emsignrepo.sh` — re-fetch all published certs, verify each against emSign's own published SHA-256 fingerprint, then diff bytes vs snapshot (3 retries; the repository server drops connections).
+- Both exit 0 on no-change, print diffs/failures otherwise. Run by the weekly watcher agent (Discord #security on anomaly).
+
+## Cross-checks done at seed time (2026-10-30)
+
+- CCA certs: DER bodies decode to `CN=CCA India 2022` (self-signed, 4096-bit RSA, 2022-02-02 → 2042-02-02) and `CN=CCA India 2022 SPL` (2022-09-20 → 2042-09-20). SPL PEM has a stray blank line inside the base64 — openssl strict parse fails; DER body valid.
+- emSign corpus: 116/116 file sha256 == publisher-declared fingerprint. Repository copy of `EM DV TLS CA - G2A-1` == the cert actually served to .bank.in hosts (captured in CyberOpsec data/runs/bankin-tls-2026-10-22, 25 eMudhra + 8 emSign issuers in the live sweep).
+- TrustCheck fixture `emsign-ecc-g3.pem` == this corpus's `emSignECCRootCAG3.crt` (same key/fingerprint 86:a1:ec:ba…; different PEM encoding).
+
+## Known-findings log
+
+- idrbtca.org.in apex: TCP timeout from both sandbox and ocitwo (Indian vantage) — not geo-fencing, host down/deaf. `praman.idrbtca.org.in` → 404, `idrbtca.org.in/crl_27B0.crl` → 403 (2026-10-30).
+- nicca.nic.in: TCP timeout from India; nic.in/nicca page has no cert links.
+- emsign.com marketing site redirects to Sectigo CertiNext branding; the live repository is repository.emsign.com (AIA `repository.emsign.com/certs/*.p7c`).

@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<!-- Google Tag Manager -->
+<script>(function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'});
+        var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-T87HXRM');</script>
+<!-- End Google Tag Manager -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#FFFFFF">
+<title>Repository | emSign by eMudhra</title>
+<meta name="description" content="emSign and eMudhra trust services repository: Certification Practice Statements (CP/CPS), UAE QTSP policies, subscriber and relying party agreements, CA certificates, CRLs and audit reports.">
+<meta property="og:title" content="emSign Trust Services Repository">
+<meta property="og:description" content="Certification Practice Statements, UAE QTSP policies, legal agreements, CA certificates and revocation data for all eMudhra trust programs.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://repository.emsign.com/">
+<link rel="shortcut icon" href="img/favicon.png">
+<!-- DM Sans variable font (weights 400-700, latin) embedded so the page is fully self-contained -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[{"@type":"WebPage","name":"emSign Trust Services Repository","url":"https://repository.emsign.com/","dateModified":"2026-07-24","publisher":{"@type":"Organization","name":"eMudhra","url":"https://www.emudhra.com/"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"emSign","item":"https://www.emsign.com/"},{"@type":"ListItem","position":2,"name":"Repository","item":"https://repository.emsign.com/"}]}]}
+</script>
+<link rel="stylesheet" href="css/repository.css">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T87HXRM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<a class="skip-link" href="#documents">Skip to content</a>
+<div class="sr-only" aria-live="polite" id="live"></div>
+
+
+<a class="site-ticker" href="https://emudhra.com/en/post/certificate-security-incident">
+  <div class="container">
+    <div class="site-ticker__row">
+      <span class="site-ticker__identity"><span class="site-ticker__spark" aria-hidden="true">&#10022;</span>Security Update</span>
+      <span class="site-ticker__center">
+        <span class="site-ticker__message">Update on our TLS certificates</span>
+        <span class="site-ticker__detail">Digital signature, eSign, emSigner, CertiNext, emCA, PrivaTrust and SecurePass are not affected &#183; Updated 30 Oct 2026</span>
+      </span>
+      <span class="site-ticker__cta">Read the Update</span>
+    </div>
+    <div class="site-ticker__mobile" aria-hidden="true">
+      <span class="site-ticker__mobile-text">
+        <span class="site-ticker__identity"><span class="site-ticker__spark">&#10022;</span>Security Update</span>
+        <span class="site-ticker__mobile-line2">Update on our TLS certificates</span>
+      </span>
+      <span class="site-ticker__cta">Read the Update</span>
+    </div>
+  </div>
+</a>
+
+
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="./" aria-label="emSign Repository home">
+      <img src="img/emsign-logo.svg" alt="emSign - SSL/TLS Certificate Authority">
+      <span class="byline">Repository</span>
+    </a>
+    <nav class="site-nav" id="siteNav" aria-label="Site">
+      <a class="nav-cta" href="contactus.jsp">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<div class="banner">
+  <div class="container">
+    <div class="banner-grid">
+      <div style="flex:1 1 460px; min-width:min(280px, 100%);">
+        <div class="eyebrow">Trusted Digital Certificates</div>
+        <h1>Trust Services Repository</h1>
+        <p class="lede">The authoritative reference for eMudhra trust services: certification practice statements, policies, legal agreements, CA certificates and revocation data across emSign Public Trust, InCommon, the UAE Qualified Trust Service Provider, time stamping and private trust programs.</p>
+      </div>
+      <aside class="banner-updates" aria-label="Recent updates">
+        <h2>Recent updates</h2>
+        <ul id="updateList">
+          <li><b>17 Oct 2026</b> - CP/CPS update: S/MIME v1.01</li>
+          <li><b>17 Oct 2026</b> - CP/CPS update: InCommon IGTF TLS v3.05</li>
+          <li><b>07 Oct 2026</b> - CP/CPS update: InCommon CA TLS v1.09</li>
+          <li><b>05 Oct 2026</b> - CP/CPS update: SSL/TLS v1.09</li>
+          <li><b>21 Sep 2026</b> - CP/CPS update: InCommon IGTF TLS v3.04</li>
+          <li><b>05 Sep 2026</b> - CP/CPS update: S/MIME v1.00</li>
+        </ul>
+      </aside>
+    </div>
+    <div class="hero-numbers" id="stats" role="group" aria-label="Repository statistics"></div>
+  </div>
+</div>
+
+<div class="toolbar" role="search">
+  <div class="container">
+    <div class="tb-row">
+    <div class="search-wrap">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M11.7 10.3a6.5 6.5 0 1 0-1.4 1.4l3.5 3.5 1.4-1.4zM2 6.5A4.5 4.5 0 1 1 6.5 11 4.5 4.5 0 0 1 2 6.5z"/></svg>
+      <input id="q" type="search" placeholder="Search documents, CAs, OIDs, SHA-256 fingerprints" aria-label="Search the repository">
+      <kbd id="qHint" title="Press / to search">/</kbd>
+    </div>
+    <nav class="anchors" aria-label="Page sections">
+      <a href="#documents">Documents</a>
+      <a href="#certificates">Certificates</a>
+      <a href="#audits">Audits</a>
+    </nav>
+    </div>
+    <div class="program-chips" id="programBar" role="group" aria-label="Filter by trust program"></div>
+  </div>
+</div>
+
+<main id="main">
+  <section class="band" id="documents" aria-labelledby="documents-h">
+    <div class="container">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">Policies and agreements</div>
+          <h2 id="documents-h">Policy and Legal Documents</h2>
+        </div>
+        <span class="count" id="docCount"></span>
+        <div class="sec-tools" id="catBar" role="group" aria-label="Filter by document type"></div>
+      </div>
+      <div class="doc-grid" id="docGrid"></div>
+      <p class="empty" id="docEmpty">No documents match the current search and filters.</p>
+    </div>
+  </section>
+
+  <section class="band band-wash" id="certificates" aria-labelledby="certificates-h">
+    <div class="container">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">Certificate hierarchy</div>
+          <h2 id="certificates-h">CA Certificates</h2>
+        </div>
+        <span class="count" id="certCount"></span>
+        <div class="sec-tools">
+          <button class="tbtn" id="expandAll" type="button">Expand all</button>
+          <button class="tbtn" id="collapseAll" type="button">Collapse all</button>
+        </div>
+      </div>
+      <div class="ca-finder">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M11.7 10.3a6.5 6.5 0 1 0-1.4 1.4l3.5 3.5 1.4-1.4zM2 6.5A4.5 4.5 0 1 1 6.5 11 4.5 4.5 0 0 1 2 6.5z"/></svg>
+        <input id="caFinder" type="text" placeholder="Find a CA by name and jump to it in the hierarchy" role="combobox" aria-expanded="false" aria-controls="caFinderList" aria-autocomplete="list" autocomplete="off" aria-label="Find a certificate authority">
+        <div id="caFinderList" class="finder-list" role="listbox" hidden></div>
+      </div>
+      <div id="certList"></div>
+      <p class="empty" id="certEmpty">No certificate authorities match the current search and filters.</p>
+    </div>
+  </section>
+
+  <section class="band band-cream" id="audits" aria-labelledby="audits-h">
+    <div class="container">
+      <div class="sec-head">
+        <div>
+          <div class="eyebrow">Independent assurance</div>
+          <h2 id="audits-h">Audits and Compliance</h2>
+        </div>
+      </div>
+      <div class="seal-grid">
+        <a class="seal" href="https://www.cpacanada.ca/webtrustseal?sealid=12099" target="_blank" rel="noopener"><img class="seal-img" src="img/WebTrust_CA.jpg" alt="WebTrust for Certificate Authorities" width="100" height="125"><span class="s-kind">WebTrust</span><span class="s-name">Certification Authorities</span><span class="s-link">View seal and audit report</span></a>
+        <a class="seal" href="https://www.cpacanada.ca/webtrustseal?sealid=12100" target="_blank" rel="noopener"><img class="seal-img" src="img/WebTrust_Baseline.jpg" alt="WebTrust Certificate Authority SSL Baseline" width="100" height="125"><span class="s-kind">WebTrust</span><span class="s-name">SSL Baseline Requirements</span><span class="s-link">View seal and audit report</span></a>
+        <a class="seal" href="https://www.cpacanada.ca/webtrustseal?sealid=12101" target="_blank" rel="noopener"><img class="seal-img" src="img/WebTrust_EV.jpg" alt="Extended Validation WebTrust for Certificate Authorities" width="100" height="125"><span class="s-kind">WebTrust</span><span class="s-name">Extended Validation SSL</span><span class="s-link">View seal and audit report</span></a>
+        <a class="seal" href="https://www.cpacanada.ca/webtrustseal?sealid=12102" target="_blank" rel="noopener"><img class="seal-img" src="img/WebTrustBRCodeSigning.jpg" alt="WebTrust Certificate Authority CodeSigning" width="100" height="125"><span class="s-kind">WebTrust</span><span class="s-name">Code Signing Baseline</span><span class="s-link">View seal and audit report</span></a>
+        <a class="seal" href="https://www.cpacanada.ca/webtrustseal?sealid=12103" target="_blank" rel="noopener"><img class="seal-img" src="img/network-security-logo.png" alt="Network Security" width="100" height="125"><span class="s-kind">WebTrust</span><span class="s-name">Network Security</span><span class="s-link">View seal and audit report</span></a>
+        <a class="seal" href="https://www.cpacanada.ca/webtrustseal?sealid=12104" target="_blank" rel="noopener"><img class="seal-img" src="img/webtrust-s-mime-logo.png" alt="WebTrust SMIME" width="100" height="125"><span class="s-kind">WebTrust</span><span class="s-name">S/MIME</span><span class="s-link">View seal and audit report</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <img src="img/emudhra-footer-logo.png" alt="eMudhra logo" width="147" height="40">
+        <p>Empowering digital transformation through trusted identity, signatures, and secure enterprise solutions.</p>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="https://emudhra.com/en-in/our-history">Our History &amp; Purpose</a></li>
+          <li><a href="https://emudhra.com/en-in/leadership">Leadership</a></li>
+          <li><a href="https://emudhra.com/en-in/board-directors">Board of Directors</a></li>
+          <li><a href="https://emudhra.com/en-in/investors">Investor</a></li>
+          <li><a href="https://emudhra.com/en-in/environment-social-and-governance">ESG</a></li>
+          <li><a href="https://emudhra.com/en-in/corporate-social-responsibility">CSR</a></li>
+          <li><a href="https://emudhra.com/en-in/sitemap">Sitemap</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="https://emudhra.com/en-in/contact-us">Contact Sales</a></li>
+          <li><a href="https://emudhra.com/en-in/media-contacts">Media Contacts</a></li>
+        </ul>
+        <h4 class="foot-sub">FAQs</h4>
+        <ul>
+          <li><a href="https://emudhra.com/en-in/faq/what-is-pki-and-how-does-it-work">What is PKI</a></li>
+          <li><a href="https://emudhra.com/en-in/faq/what-is-identity-and-access-management-iam-solution">What is IAM</a></li>
+          <li><a href="https://emudhra.com/en-in/faq/what-is-certificate-lifecycle-management">What is CLM</a></li>
+          <li><a href="https://emudhra.com/en-in/faq/what-is-ca-ssl-tls-security-emudhra">What is SSL/TLS</a></li>
+          <li><a href="https://emudhra.com/en-in/faq/what-is-zero-trust-security-and-how-does-it-work">What is Zero Trust</a></li>
+          <li><a href="https://emudhra.com/en-in/faq/what-is-multi-factor-authentication">What is MFA</a></li>
+          <li><a href="https://emudhra.com/en-in/faq/difference-between-mfa-and-2fa">Two-Factor Authentication</a></li>
+          <li><a href="https://emudhra.com/en-in/faq/what-is-a-key-management-system-kms">Key Management System</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="https://emudhra.com/en-in/emsigner/esignature-legality-guide">eSignature Legality Guide</a></li>
+          <li><a href="https://emudhra.com/en-in/terms-of-use">Terms of Use</a></li>
+          <li><a href="https://emudhra.com/en-in/disclaimer">Legal Disclaimer</a></li>
+          <li><a href="https://emudhra.com/en-in/privacy-policy">Privacy Policy</a></li>
+          <li><a href="https://emudhra.com/en-in/cookie-policy">Cookie Policy</a></li>
+        </ul>
+        <h4 class="foot-sub">Partners</h4>
+        <ul>
+          <li><a href="https://emudhra.com/en-in/partners">Become a Partner</a></li>
+          <li><a href="https://emudhra.com/en-in/partners">Meet our Partners</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="https://emudhra.com/en-in/blog">Blog</a></li>
+          <li><a href="https://emudhra.com/en-in/press-release">Press Release</a></li>
+          <li><a href="https://emudhra.com/en-in/case-studies">Case Studies</a></li>
+          <li><a href="https://emudhra.com/en-in/datasheets">Datasheets</a></li>
+          <li><a href="https://emudhra.com/en-in/webinars">Webinars</a></li>
+          <li><a href="https://emudhra.com/en-in/reports">Reports</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; eMudhra. All rights reserved.</span>
+      <span class="foot-social">
+        <a href="https://www.linkedin.com/company/emudhra/" target="_blank" rel="noopener" aria-label="eMudhra on LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg></a>
+        <a href="https://www.facebook.com/eMudhra/" target="_blank" rel="noopener" aria-label="eMudhra on Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.02 4.39 11.02 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.7 4.53-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.95.93-1.95 1.89v2.26h3.32l-.53 3.49h-2.79V24C19.61 23.09 24 18.09 24 12.07z"/></svg></a>
+        <a href="https://www.youtube.com/channel/UCHw3wmhVx7Qe3Bqjb_BX8Gw" target="_blank" rel="noopener" aria-label="eMudhra on YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.07 0 12 0 12s0 3.93.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.93 24 12 24 12s0-3.93-.5-5.81zM9.55 15.57V8.43L15.82 12z"/></svg></a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" type="button" aria-label="Back to top">&uarr;</button>
+
+<noscript><p class="note">This page needs JavaScript to filter and search the repository. All documents and certificates remain available on the <a href="https://repository.emsign.com/">current repository page</a>.</p></noscript>
+
+<script>
+  var REPO = '';
+
+  var PROGRAMS = {
+    emsign:   { label: 'emSign Public Trust',        color: 'var(--c-emsign)' },
+    incommon: { label: 'InCommon',                   color: 'var(--c-incommon)' },
+    qtsp:     { label: 'UAE QTSP',                   color: 'var(--c-qtsp)' },
+    tsa:      { label: 'Time Stamping',              color: 'var(--c-tsa)' },
+    private:  { label: 'Private Trust and Regional', color: 'var(--c-private)' }
+  };
+
+  var CATS = {
+    cpcps:     'CP/CPS',
+    policy:    'Policies and Practice Statements',
+    agreement: 'Agreements',
+    terms:     'Terms and Conditions'
+  };
+
+  var DOCS = [
+    { program: 'emsign', cat: 'cpcps', title: 'Certification Practice Statement (CP/CPS) for Trusted PKI',
+      version: 'v1.25', date: '24 Jul 2026', oid: '1.3.6.1.4.1.50977.1.0.1',
+      pdf: REPO + 'cps/CP-CPS-v1.25.pdf', md: 'https://github.com/emsign/CP-CPS-Policy-Documentations/blob/main/General-CP-CPS/emSign-General-CP-CPS.md', mdref: 'https://repository.emsign.com/cps/CP-CPS-v1.25.md',
+      older: [
+        ['v1.24','Jul 10, 2026','cps/CP-CPS-v1.24.pdf'],['v1.23','Nov 28, 2025','cps/CP-CPS-v1.23.pdf'],
+        ['v1.22','Nov 22, 2025','cps/CP-CPS-v1.22.pdf'],['v1.21','Sep 09, 2025','cps/CP-CPS-v1.21.pdf'],
+        ['v1.20','Jul 08, 2025','cps/CP-CPS-v1.20.pdf'],['v1.19','Jun 06, 2025','cps/CP-CPS-v1.19.pdf'],
+        ['v1.18','Mar 14, 2025','cps/CP-CPS-v1.18.pdf'],['v1.17','Nov 30, 2024','cps/CP-CPS-v1.17.pdf'],
+        ['v1.16','Sep 05, 2024','cps/CP-CPS-v1.16.pdf'],['v1.15','Jun 17, 2024','cps/CP-CPS-v1.15.pdf'],
+        ['v1.14','Aug 30, 2023','cps/CP-CPS-v1.14.pdf'],['v1.13','Aug 16, 2023','cps/CP-CPS-v1.13.pdf'],
+        ['v1.12','Sep 26, 2022','cps/CP-CPS-v1.12.pdf'],['v1.11','Nov 26, 2021','cps/CP-CPS-v1.11.pdf'],
+        ['v1.10','Sep 08, 2021','cps/CP-CPS-v1.10.pdf'],['v1.09','Jul 26, 2021','cps/CP-CPS-v1.09.pdf'],
+        ['v1.08','Apr 26, 2021','cps/CP-CPS-v1.08.pdf'],['v1.07','Aug 20, 2020','cps/CP-CPS-v1.07.pdf'],
+        ['v1.06','Aug 25, 2019','cps/CP-CPS-v1.06.pdf'],['v1.05','Oct 25, 2018','cps/CP-CPS-v1.05.pdf'],
+        ['v1.04','Oct 09, 2018','cps/CP-CPS-v1.04.pdf'],['v1.03','Jun 26, 2018','cps/CP-CPS-v1.03.pdf'],
+        ['v1.02','Jun 05, 2018','cps/CP-CPS-v1.02.pdf'],['v1.01','Feb 15, 2018','cps/CP-CPS-v1.01.pdf'],
+        ['v1.00','Nov 10, 2017','cps/CP-CPS-v1.00.pdf']
+      ] },
+    { program: 'emsign', cat: 'cpcps', title: 'Certification Practice Statement (CP/CPS) for SSL/TLS',
+      version: 'v1.09', date: '05 Oct 2026', oid: '1.3.6.1.4.1.50977.1.0.1.1',
+      pdf: REPO + 'cps/ssl/SSL-TLS-CP-CPS-v1.09.pdf', md: 'https://github.com/emsign/CP-CPS-Policy-Documentations/blob/main/SSL-TLS-CP-CPS/emSign-SSL-TLS-CP-CPS.md', mdref: 'https://repository.emsign.com/cps/ssl/SSL-TLS-CP-CPS-v1.09.md',
+      older: [
+        ['v1.08','Aug 13, 2026','cps/ssl/SSL-TLS-CP-CPS-v1.08.pdf'],
+        ['v1.07','Jul 24, 2026','cps/ssl/SSL-TLS-CP-CPS-v1.07.pdf'],
+        ['v1.06','Jul 10, 2026','cps/ssl/SSL-TLS-CP-CPS-v1.06.pdf'],['v1.05','Apr 21, 2026','cps/ssl/SSL-TLS-CP-CPS-v1.05.pdf'],
+        ['v1.04','Apr 02, 2026','cps/ssl/SSL-TLS-CP-CPS-v1.04.pdf'],['v1.03','Nov 28, 2025','cps/ssl/SSL-TLS-CP-CPS-v1.03.pdf'],
+        ['v1.02','Nov 19, 2025','cps/ssl/SSL-TLS-CP-CPS-v1.02.pdf'],['v1.01','Sep 09, 2025','cps/ssl/SSL-TLS-CP-CPS-v1.01.pdf'],
+        ['v1.00','Aug 19, 2025','cps/ssl/SSL-TLS-CP-CPS-v1.00.pdf']
+      ] },
+    { program: 'emsign', cat: 'cpcps', title: 'Certification Practice Statement (CP/CPS) for Code Signing',
+      version: 'v1.02', date: '24 Jul 2026', oid: '1.3.6.1.4.1.50977.1.0.1.2',
+      pdf: REPO + 'cps/codesigning/Code-Signing-CP-CPS-v1.02.pdf', md: 'https://github.com/emsign/CP-CPS-Policy-Documentations/blob/main/CS-CP-CPS/emSign-CS-CP-CPS.md', mdref: 'https://repository.emsign.com/cps/codesigning/Code-Signing-CP-CPS-v1.02.md',
+      older: [
+        ['v1.01','Feb 28, 2026','cps/codesigning/Code-Signing-CP-CPS-v1.01.pdf'],
+        ['v1.00','Sep 23, 2025','cps/codesigning/Code-Signing-CP-CPS-v1.00.pdf']
+      ] },
+    { program: 'emsign', cat: 'cpcps', title: 'Certification Practice Statement (CP/CPS) for S/MIME',
+      version: 'v1.01', date: '17 Oct 2026', oid: '1.3.6.1.4.1.50977.1.0.1.3',
+      pdf: REPO + 'cps/smime/SMIME-CP-CPS-v1.01.pdf', md: 'https://github.com/emsign/CP-CPS-Policy-Documentations/blob/main/SMIME-CP-CPS/emSign-SMIME-CP-CPS.md', mdref: 'https://repository.emsign.com/cps/smime/SMIME-CP-CPS-v1.01.md',
+      older: [
+        ['v1.00','Sep 05, 2026','cps/smime/SMIME-CP-CPS-v1.00.pdf']
+      ] },
+    { program: 'incommon', cat: 'cpcps', title: 'Certification Practice Statement (CP/CPS) for InCommon CA TLS',
+      version: 'v1.09', date: '07 Oct 2026', oid: '1.3.6.1.4.1.5923.1.4.3.1.2',
+      pdf: REPO + 'cps/incommon/InCommon-CA-TLS-CP-CPS-v1.09.pdf', md: 'https://github.com/emsign/CP-CPS-Policy-Documentations/blob/main/SSL-TLS-CP-CPS/InCommon-CA-TLS-CPCPS.md', mdref: 'https://repository.emsign.com/cps/incommon/InCommon-CA-TLS-CP-CPS-v1.09.md',
+      older: [
+        ['v1.08','Aug 13, 2026','cps/incommon/InCommon-CA-TLS-CP-CPS-v1.08.pdf'],
+        ['v1.07','Jul 24, 2026','cps/incommon/InCommon-CA-TLS-CP-CPS-v1.07.pdf'],
+        ['v1.06','Jul 10, 2026','cps/incommon/InCommon-CA-TLS-CP-CPS-v1.06.pdf'],
+        ['v1.05','Apr 21, 2026','cps/incommon/InCommon-CA-TLS-CP-CPS-v1.05.pdf'],
+        ['v1.04','Apr 08, 2026','cps/incommon/InCommon-CA-TLS-CP-CPS-v1.04.pdf']
+      ] },
+    { program: 'incommon', cat: 'cpcps', title: 'Certification Practice Statement (CPS) for InCommon IGTF TLS',
+      version: 'v3.05', date: '17 Oct 2026', oid: '1.3.6.1.4.1.5923.1.4.3.4.3',
+      pdf: REPO + 'cps/incommon/InCommon-IGTF-SSL-CPS-v3.05.pdf', md: 'https://github.com/emsign/CP-CPS-Policy-Documentations/blob/main/InCommon-IGTF-SSL-CPS/InCommon-IGTF-SSL-CPS.md', mdref: 'https://repository.emsign.com/cps/incommon/InCommon-IGTF-SSL-CPS-v3.05.md',
+      older: [
+        ['v3.04','Sep 21, 2026','cps/incommon/InCommon-IGTF-SSL-CPS-v3.04.pdf'],
+        ['v3.03','Jul 24, 2026','cps/incommon/InCommon-IGTF-SSL-CPS-v3.03.pdf'],
+        ['v3.02','Jul 10, 2026','cps/incommon/InCommon-IGTF-SSL-CPS-v3.02.pdf'],
+        ['v3.01','Apr 21, 2026','cps/incommon/InCommon-IGTF-SSL-CPS-v3.01.pdf'],
+        ['v3.0','Apr 11, 2026','cps/incommon/InCommon-IGTF-SSL-CPS-v3.0.pdf']
+      ] },
+    { program: 'emsign', cat: 'agreement', title: 'Subscriber Agreement',
+      version: 'v1.08', date: '06 Apr 2026',
+      pdf: REPO + 'cps/SA-v1.08.pdf',
+      older: [
+        ['v1.07','Aug 26, 2025','cps/SA-v1.07.pdf'],['v1.06','Nov 22, 2022','cps/SA-v1.06.pdf'],
+        ['v1.05','Dec 01, 2020','cps/SA-v1.05.pdf'],['v1.04','May 07, 2020','cps/SA-v1.04.pdf'],
+        ['v1.03','Apr 23, 2020','cps/SA-v1.03.pdf'],['v1.02','Aug 25, 2019','cps/SA-v1.02.pdf'],
+        ['v1.01','Oct 25, 2018','cps/SA-v1.01.pdf']
+      ] },
+    { program: 'emsign', cat: 'agreement', title: 'Relying Party Agreement',
+      version: 'v1.02', date: '06 Apr 2026',
+      pdf: REPO + 'cps/RPA-v1.02.pdf',
+      older: [
+        ['v1.01','Dec 01, 2020','cps/RPA-v1.01.pdf'],['v1.00','Nov 10, 2017','cps/RPA-v1.00.pdf']
+      ] },
+    { program: 'qtsp', cat: 'cpcps', title: 'UAE QTS eMudhra DMCC CP/CPS',
+      version: 'v1.01', date: '11 Aug 2026', oid: '1.3.6.1.4.1.50977.1.0.4',
+      pdf: REPO + 'cps/uae/UAE-QTS-eMudhra-DMCC-CPCPS-V1.01.pdf',
+      older: [
+        ['v1.0','Jan 05, 2026','cps/uae/UAE-QTS-eMudhra-DMCC-CPCPS-V1.0.pdf']
+      ] },
+    { program: 'qtsp', cat: 'policy', title: 'UAE QTS Service Policy',
+      version: 'v1.1', date: '10 Jul 2026', oid: '1.3.6.1.4.1.50977.1.0.5',
+      pdf: REPO + 'cps/uae/UAE-QTS-Service-Policy-V1.1.pdf',
+      older: [
+        ['v1.0','Jan 05, 2026','cps/uae/UAE-QTS-Service-Policy-V1.0.pdf']
+      ] },
+    { program: 'qtsp', cat: 'policy', title: 'UAE QTS Service Practice Statement',
+      version: 'v1.1', date: '10 Jul 2026', oid: '1.3.6.1.4.1.50977.1.0.6',
+      pdf: REPO + 'cps/uae/UAE-QTS-Service-Practice-Statement-V1.1.pdf',
+      older: [
+        ['v1.0','Jan 05, 2026','cps/uae/UAE-QTS-Service-Practice-Statement-V1.0.pdf']
+      ] },
+    { program: 'qtsp', cat: 'policy', title: 'UAE QTS Time Stamping Policy and Procedure',
+      version: 'v1.0', date: '05 Jan 2026',
+      pdf: REPO + 'cps/uae/UAE-QTS-Time-Stamping-Policy-Procedure-V1.0.pdf', older: [] },
+    { program: 'qtsp', cat: 'policy', title: 'UAE QTS Validation Service Policy and Practice Statement',
+      version: 'v1.0', date: '05 Jan 2026',
+      pdf: REPO + 'cps/uae/UAE-QTS-Validation-Service-Policy-and-Practice-Statement-V1.0.pdf', older: [] },
+    { program: 'qtsp', cat: 'agreement', title: 'UAE QTS Subscriber Agreement (QCert for eSig)',
+      version: 'v1.0', date: '05 Jan 2026',
+      pdf: REPO + 'cps/uae/UAE-QTS-Subscriber-Agreement-QCertForESig-V1.0.pdf', older: [] },
+    { program: 'qtsp', cat: 'agreement', title: 'UAE QTS Subscriber Agreement (QCert for eSeal)',
+      version: 'v1.0', date: '05 Jan 2026',
+      pdf: REPO + 'cps/uae/UAE-QTS-Subscriber-Agreement-QCertForESeal-V1.0.pdf', older: [] },
+    { program: 'qtsp', cat: 'terms', title: 'UAE QTS Terms and Conditions - Issuance of Qualified Certificates for Electronic Signatures (QCertForESig)',
+      version: 'v1.0', date: '10 Jul 2026',
+      pdf: REPO + 'cps/uae/terms/UAE-QTS-QCertForESig-Issuance-of-Qualified-Certificates-for-Electronic-Signatures-V1.0.pdf', older: [] },
+    { program: 'qtsp', cat: 'terms', title: 'UAE QTS Terms and Conditions - Issuance of Qualified Certificates for Electronic Seals (QCertForESeal)',
+      version: 'v1.0', date: '10 Jul 2026',
+      pdf: REPO + 'cps/uae/terms/UAE-QTS-QCertForESeal-Issuance-of-Qualified-Certificates-for-Electronic-Seals-V1.0.pdf', older: [] },
+    { program: 'qtsp', cat: 'terms', title: 'UAE QTS Terms and Conditions - Provision of Qualified Electronic Signature Creation Devices (QSCDForESig)',
+      version: 'v1.0', date: '10 Jul 2026',
+      pdf: REPO + 'cps/uae/terms/UAE-QTS-QSCDForESig-Provision-of-Qualified-Electronic-Signature-Creation-Devices-V1.0.pdf', older: [] },
+    { program: 'qtsp', cat: 'terms', title: 'UAE QTS Terms and Conditions - Provision of Electronic Seal Creation Devices (QSCDForESeal)',
+      version: 'v1.0', date: '10 Jul 2026',
+      pdf: REPO + 'cps/uae/terms/UAE-QTS-QSCDForESeal-Provision-of-Electronic-Seal-Creation-Devices-V1.0.pdf', older: [] },
+    { program: 'qtsp', cat: 'terms', title: 'UAE QTS Terms and Conditions - Remote Management of Qualified Electronic Signature Creation Devices (QRemSigForESig)',
+      version: 'v1.0', date: '10 Jul 2026',
+      pdf: REPO + 'cps/uae/terms/UAE-QTS-QRemSigForESig-Remote-Management-of-Qualified-Electronic-Signature-Creation-Devices-V1.0.pdf', older: [] },
+    { program: 'qtsp', cat: 'terms', title: 'UAE QTS Terms and Conditions - Remote Management of Qualified Electronic Seal Creation Devices (QRemSealForESeal)',
+      version: 'v1.0', date: '10 Jul 2026',
+      pdf: REPO + 'cps/uae/terms/UAE-QTS-QRemSealForESeal-Remote-Management-of-Qualified-Electronic-Seal-Creation-Devices-V1.0.pdf', older: [] },
+    { program: 'qtsp', cat: 'terms', title: 'UAE QTS Terms and Conditions - Validation of Qualified Electronic Signatures (QValForESig)',
+      version: 'v1.0', date: '10 Jul 2026',
+      pdf: REPO + 'cps/uae/terms/UAE-QTS-QValForESig-Validation-of-Qualified-Electronic-Signatures-V1.0.pdf', older: [] },
+    { program: 'qtsp', cat: 'terms', title: 'UAE QTS Terms and Conditions - Validation of Qualified Electronic Seals (QValForESeal)',
+      version: 'v1.0', date: '10 Jul 2026',
+      pdf: REPO + 'cps/uae/terms/UAE-QTS-QValForESeal-Validation-of-Qualified-Electronic-Seals-V1.0.pdf', older: [] },
+    { program: 'qtsp', cat: 'terms', title: 'UAE QTS Terms and Conditions - Creation of Qualified Electronic Time Stamps',
+      version: 'v1.0', date: '10 Jul 2026',
+      pdf: REPO + 'cps/uae/terms/UAE-QTS-Creation-of-Qualified-Electronic-Time-Stamps-V1.0.pdf', older: [] },
+    { program: 'tsa', cat: 'policy', title: 'Time Stamping Policy Document',
+      version: 'v1.01', date: '16 Jan 2020', pdf: REPO + 'ts/Time-Stamping-Policy-v1.01.pdf', older: [] },
+    { program: 'tsa', cat: 'agreement', title: 'Time Stamping Terms of Use Document',
+      version: 'v1.01', date: '16 Jan 2020', pdf: REPO + 'ts/TSS-TOU-v1.01.pdf', older: [] },
+    { program: 'private', cat: 'cpcps', title: 'Certification Practice Statement (CP/CPS) for IGTF (Private Trust)',
+      version: 'v1.00', date: '06 Nov 2023', pdf: REPO + 'cps/IGTF/IGTF%20CPCPS%20V1.00.pdf', older: [] },
+    { program: 'private', cat: 'cpcps', title: 'Certification Practice Statement (CP/CPS) for AXERA',
+      version: 'v1.00', date: '18 Jul 2025', pdf: REPO + 'cps/AXERA/AXERA%20CP%20CPS%20V1.00.pdf', older: [] }
+  ];
+
+  /* Time Stamping Units. The TSU certificates are not published, so these are
+     listed by name only. The validity was read from the certificates, not
+     carried over from the old page, which stated a validity none of the three
+     certificates actually has. */
+  var TSUS = [
+    { n: 'Soft-Net Timestamping Responder', from: '12-Aug-2020', to: '12-Aug-2031', issuer: 'emSign Time Stamping CA - C1' },
+    { n: 'emSign Time Stamping Authority - G1', from: '08-Jun-2020', to: '07-Jun-2031', issuer: 'emSign Class 3 CA - G1' },
+    { n: 'emSign Time Stamping Authority - C1', from: '08-Jun-2020', to: '07-Jun-2031', issuer: 'emSign Class 3 CA - C1' }
+  ];
+
+  /* CRLs are served over http, matching the CRL distribution point inside the
+     certificates themselves. Fetching revocation data over https would mean
+     validating the CRL host's own certificate, which needs a CRL to check. */
+  var CRL_BASE = 'http://crl.emsign.com?';
+
+  /* c = certs/<file>, r = crl.emsign.com?<query>, f = SHA-256 fingerprint, t = test endpoint */
+  var CERTS = [
+    { program: 'emsign', root: { n: 'emSign Root CA - G1', c: 'emSignRootCAG1.crt', r: 'RootCAG1.crl', f: '40:F6:AF:03:46:A9:9A:A1:CD:1D:55:5A:4E:9C:CE:62:C7:F9:63:46:03:EE:40:66:15:83:3D:C8:C8:D0:03:67' },
+      subs: [
+        { n: 'emSign SSL CA - G1', c: 'emSignSSLCAG1.crt', r: 'emSignSSLCAG1.crl', f: '47:B2:EF:BC:36:70:E7:DB:4B:41:F2:2C:51:FC:02:EE:84:FB:2D:BF:30:82:A4:9F:2C:26:88:12:2E:92:10:A1', t: [['', 'testovg1emsigncom.crt', 'https://testovg1.emsign.com'], ['', 'testovg1remsigncom.crt', 'https://testovg1r.emsign.com', 'Revoked'], ['', 'testovg1eemsigncom.crt', 'https://testovg1e.emsign.com', 'Expired']], ok: true },
+        { n: 'emSign EV SSL CA - G1', c: 'emSignEVSSLCAG1.crt', r: 'emSignEVSSLCAG1.crl', f: '43:34:EE:B2:CC:11:4F:82:BE:E6:F8:A7:E5:AE:A0:3A:42:EB:2E:1F:70:CB:D6:61:02:E4:14:D7:2F:00:33:B9', t: [['', 'testevg1emsigncom.crt', 'https://testevg1.emsign.com'], ['', 'testevg1remsigncom.crt', 'https://testevg1r.emsign.com', 'Revoked'], ['', 'testevg1eemsigncom.crt', 'https://testevg1e.emsign.com', 'Expired']], ok: true },
+        { n: 'emSign Class 1 CA - G1', c: 'emSignClass1CAG1.crt', r: 'emSignClass1CAG1.crl', f: 'CF:6D:03:33:D0:BE:2C:69:A4:2D:45:39:60:DE:E9:E1:09:D9:E8:84:3E:A3:06:1A:16:71:D6:EA:F8:5E:B7:D8', rv: true },
+        { n: 'emSign Class 2 CA - G1', c: 'emSignClass2CAG1.crt', r: 'emSignClass2CAG1.crl', f: '63:A8:36:9D:C8:24:A4:2B:C7:AE:6E:E5:D2:6A:AF:D3:2D:F4:AF:67:7C:A1:8B:94:1B:7A:57:E3:3B:1E:35:59', rv: true },
+        { n: 'emSign Class 3 CA - G1', c: 'emSignClass3CAG1.crt', r: 'emSignClass3CAG1.crl', f: '42:DA:1C:56:2F:80:E4:6D:A7:A3:21:24:4E:FC:23:D0:FA:A9:FE:BB:B7:AA:03:77:D9:6B:42:D9:E8:8A:B2:00', rv: true },
+        { n: 'emSign Device CA - G1', c: 'emSignDeviceCAG1.crt', r: 'emSignDeviceCAG1.crl', f: '4C:91:98:B6:73:55:08:58:79:9A:D2:74:4C:C0:83:C1:BA:00:27:E7:7D:3B:8F:D6:D5:6C:F5:36:20:D0:99:E2', rv: true },
+        { n: 'emSign SMIME CA - G1', c: 'emSignSMIMECAG1.crt', r: 'emSignSMIMECAG1.crl', f: 'BA:9E:8A:1F:CC:41:54:B0:94:BE:73:40:35:EC:A7:E5:4E:9F:56:19:D5:11:B2:65:75:0E:EB:98:2E:2C:6D:06', rv: true },
+        { n: 'emSign Root Client Auth CA - G1', c: 'crosssign/rootclientauthcag1.crt', r: 'rootclientauthcag1.crl', f: '6F:B7:51:90:47:74:05:C2:8A:FF:FE:25:33:8A:92:F4:97:39:56:ED:5B:1A:23:53:B2:4B:62:04:E0:4D:4C:F9', x: true, rv: true },
+        { n: 'emSign Root SMIME CA - G1', c: 'crosssign/rootsmimecag1.crt', r: 'rootsmimecag1.crl', f: 'A6:51:60:E9:77:0D:70:D8:AC:E8:EC:36:70:A7:B4:EF:1F:87:F4:F5:07:B1:CE:3D:6F:C6:23:AD:ED:06:94:C1', x: true, rv: true },
+        { n: 'emSign Root TLS CA - G1', c: 'crosssign/roottlscag1.crt', r: 'roottlscag1.crl', f: '9B:91:34:76:EA:B4:76:E2:1E:08:87:DB:CD:E4:43:45:D1:35:9D:28:11:6B:83:B7:CD:3E:87:BD:80:7E:BF:68', x: true, ok: true }
+      ] },
+    { program: 'emsign', root: { n: 'emSign Root CA - G2', c: 'emSignRootCAG2.crt', r: 'RootCAG2.crl', f: '1A:A0:C2:70:9E:83:1B:D6:E3:B5:12:9A:00:BA:41:F7:EE:EF:02:08:72:F1:E6:50:4B:F0:F6:C3:F2:4F:3A:F3' },
+      subs: [
+        { n: 'emSign CS CA - G2', c: 'emSignCSCAG2.crt', r: 'emSignCSCAG2.crl', f: 'C2:E4:D1:76:50:05:D5:CA:36:1D:40:0A:43:4B:43:03:6D:BC:93:1E:C6:D7:B9:9C:17:BE:C0:30:CC:74:CA:7D' },
+        { n: 'emSign EV CS CA - G2', c: 'emSignEVCSCAG2.crt', r: 'emSignEVCSCAG2.crl', f: '69:E2:44:8C:5F:03:EE:DE:5E:C2:C9:07:EF:E9:6C:3D:33:AD:67:9B:49:CD:29:C3:8C:51:82:32:31:21:BE:FF' },
+        { n: 'emSign Time Stamping CA - G2', c: 'emSignTSACAG2.crt', r: 'emSignTSACAG2.crl', f: 'C3:BE:06:C6:B0:A9:23:34:42:31:80:E9:5E:A1:E6:83:AA:B9:C3:B7:D0:F5:CB:8A:4F:51:FB:C1:00:6F:3D:C0' },
+        { n: 'emSign Root CS CA - G2', c: 'crosssign/rootcscag2.crt', r: 'rootcscag2.crl', f: 'A4:55:EB:8D:8D:C0:3C:C7:18:9B:6A:94:38:30:0D:66:37:3E:B3:22:52:52:CE:D2:B1:2A:6D:25:F0:F9:40:E0', x: true },
+        { n: 'emSign Root TSA CA - G2', c: 'crosssign/roottsacag2.crt', r: 'roottsacag2.crl', f: '2C:15:C5:E3:1F:6C:83:7D:C2:6D:90:56:8B:10:DE:51:D8:49:E5:6E:90:ED:25:31:25:07:D2:E1:08:C3:12:39', x: true }
+      ] },
+    { program: 'emsign', root: { n: 'emSign ECC Root CA - G3', c: 'emSignECCRootCAG3.crt', r: 'RootCAG3.crl', f: '86:A1:EC:BA:08:9C:4A:8D:3B:BE:27:34:C6:12:BA:34:1D:81:3E:04:3C:F9:E8:A8:62:CD:5C:57:A3:6B:BE:6B' },
+      subs: [
+        { n: 'emSign ECC SSL CA - G3', c: 'emSignECCSSLCAG3.crt', r: 'emSignECCSSLCAG3.crl', f: '6B:51:D1:DC:F4:EB:7A:EE:42:41:85:CB:1B:95:80:57:4B:39:CB:96:38:63:DE:3E:C1:AD:31:DD:B0:76:CE:9F', t: [['', 'testovg3emsigncom.crt', 'https://testovg3.emsign.com'], ['', 'testovg3remsigncom.crt', 'https://testovg3r.emsign.com', 'Revoked'], ['', 'testovg3eemsigncom.crt', 'https://testovg3e.emsign.com', 'Expired']], ok: true },
+        { n: 'emSign ECC EV SSL CA - G3', c: 'emSignECCEVSSLCAG3.crt', r: 'emSignECCEVSSLCAG3.crl', f: '01:16:F1:7F:97:CD:EF:4A:DE:2E:63:CF:2C:1B:06:4F:D9:9F:40:4D:2B:91:41:00:BC:24:1F:07:81:85:33:23', t: [['', 'testevg3emsigncom.crt', 'https://testevg3.emsign.com'], ['', 'testevg3remsigncom.crt', 'https://testevg3r.emsign.com', 'Revoked'], ['', 'testevg3eemsigncom.crt', 'https://testevg3e.emsign.com', 'Expired']], ok: true },
+        { n: 'emSign ECC CS CA - G3', c: 'emSignECCCSCAG3.crt', r: 'emSignECCCSCAG3.crl', f: '0D:68:69:A2:B4:F5:DF:77:A6:AF:B0:34:22:5E:9B:EF:34:57:43:CF:30:6E:DF:36:EE:35:B9:D0:5A:FA:D8:9C', rv: true },
+        { n: 'emSign ECC EV CS CA - G3', c: 'emSignECCEVCSCAG3.crt', r: 'emSignECCEVCSCAG3.crl', f: '0B:AD:A9:79:B7:14:02:FE:86:06:96:03:2C:F4:0E:9D:2A:3F:41:CC:B5:D0:3B:E3:3F:BB:94:A8:0D:7F:FC:7C', rv: true },
+        { n: 'emSign ECC Class 1 CA - G3', c: 'emSignECCClass1CAG3.crt', r: 'emSignECCClass1CAG3.crl', f: 'AB:A6:A6:5D:CE:89:55:BA:F0:68:5A:B8:88:09:B7:69:9C:17:44:96:EF:9E:E9:91:53:32:51:49:4F:43:CE:10', rv: true },
+        { n: 'emSign ECC Class 2 CA - G3', c: 'emSignECCClass2CAG3.crt', r: 'emSignECCClass2CAG3.crl', f: '4E:9B:73:15:67:17:7E:17:76:A9:6D:66:D9:12:0B:3D:EB:28:B8:00:93:7E:A4:66:25:65:B3:EF:5E:C8:00:0B', rv: true },
+        { n: 'emSign ECC Class 3 CA - G3', c: 'emSignECCClass3CAG3.crt', r: 'emSignECCClass3CAG3.crl', f: '70:66:A0:F4:2F:53:0E:0D:B5:AF:EE:72:A3:B0:4D:E6:14:E7:D2:30:5C:67:D1:2C:75:6B:B2:15:E3:7C:B9:75', rv: true },
+        { n: 'emSign ECC Time stamping CA - G3', c: 'emSignECCTSACAG3.crt', r: 'emSignECCTSACAG3.crl', f: 'C4:22:AB:86:C1:72:9E:88:9F:BC:AF:5C:D7:3F:21:7E:03:C2:9F:E2:AC:50:21:2F:45:13:07:D9:15:86:9F:47', rv: true },
+        { n: 'emSign ECC Device CA - G3', c: 'emSignECCDeviceCAG3.crt', r: 'emSignECCDeviceCAG3.crl', f: '70:B9:BA:59:54:12:CF:86:14:B7:67:47:FD:68:3C:CA:27:59:F4:26:42:16:48:34:FB:EF:DD:88:50:5C:4F:1C', rv: true },
+        { n: 'emSign ECC SMIME CA - G3', c: 'emSignECCSMIMECAG3.crt', r: 'emSignECCSMIMECAG3.crl', f: 'F5:B3:E9:14:CD:E2:95:4F:65:46:4F:A8:E9:D6:9F:04:92:62:2B:3C:2A:C2:43:98:7B:11:CB:BF:1B:45:13:07', rv: true },
+        { n: 'emSign Root CS CA - G3', c: 'crosssign/rootcscag3.crt', r: 'rootcscag3.crl', f: '71:37:FA:71:AD:46:BA:68:6F:74:6D:10:14:AC:57:E8:E6:C6:E9:AF:4A:A2:F7:3C:0C:44:A5:CF:27:DE:BB:59', x: true, rv: true },
+        { n: 'emSign Root TSA CA - G3', c: 'crosssign/roottsacag3.crt', r: 'roottsacag3.crl', f: '87:3B:E6:F9:EF:30:57:22:19:28:E8:40:68:6E:2D:18:21:1A:26:80:AE:07:05:11:48:C1:1A:29:D4:1B:A9:8F', x: true, rv: true },
+        { n: 'emSign Root Client Auth CA - G3', c: 'crosssign/rootclientauthcag3.crt', r: 'rootclientauthcag3.crl', f: '63:08:85:38:02:8E:23:3C:61:B5:4C:5A:42:38:B7:C7:53:C0:4F:32:36:2F:1C:95:A4:28:D2:8E:9C:B6:B1:5E', x: true, rv: true },
+        { n: 'emSign Root SMIME CA - G3', c: 'crosssign/rootsmimecag3.crt', r: 'rootsmimecag3.crl', f: 'B4:CE:EB:A4:8E:F8:CC:C6:09:0F:6D:2A:62:A8:5D:BB:51:C5:A1:06:A7:DC:7E:C5:40:82:70:02:0F:91:C2:22', x: true, rv: true },
+        { n: 'emSign Root TLS CA - G3', c: 'crosssign/roottlscag3.crt', r: 'roottlscag3.crl', f: '30:94:02:57:92:03:9A:68:AF:6E:55:36:86:41:0B:DA:B7:C0:D4:A3:6B:90:84:CB:A6:42:02:E3:5D:6E:BB:DD', x: true, ok: true }
+      ] },
+    /* The UAE QTSP issuing CAs chain to this same root, so they are listed here
+       rather than as a second hierarchy. p: 'qtsp' scopes them to the UAE QTSP
+       program filter; the root itself serves both programs. */
+    { program: 'emsign', programs: ['emsign', 'qtsp'],
+      root: { n: 'emSign Root CA - C1', c: 'emSignRootCAC1.crt', r: 'RootCAC1.crl', f: '12:56:09:AA:30:1D:A0:A2:49:B9:7A:82:39:CB:6A:34:21:6F:44:DC:AC:9F:39:54:B1:42:92:F2:E8:C8:60:8F' },
+      subs: [
+        { n: 'emSign SSL CA - C1', c: 'emSignSSLCAC1.crt', r: 'emSignSSLCAC1.crl', f: 'F9:1A:AC:A0:E4:E5:33:74:7A:08:80:BF:CF:6F:26:72:0D:C1:D0:54:94:C3:93:8D:A6:80:22:90:D5:A0:9B:32', t: [['', 'testovc1emsigncom.crt', 'https://testovc1.emsign.com'], ['', 'testovc1remsigncom.crt', 'https://testovc1r.emsign.com', 'Revoked'], ['', 'testovc1eemsigncom.crt', 'https://testovc1e.emsign.com', 'Expired']] },
+        { n: 'emSign EV SSL CA - C1', c: 'emSignEVSSLCAC1.crt', r: 'emSignEVSSLCAC1.crl', f: 'F6:F1:59:28:6A:14:01:DE:53:97:E2:1A:00:90:53:4A:85:F5:E7:B9:F9:8F:D4:A5:A4:7B:1D:FF:D4:BF:DE:D4', t: [['', 'testevc1emsigncom.crt', 'https://testevc1.emsign.com'], ['', 'testevc1remsigncom.crt', 'https://testevc1r.emsign.com', 'Revoked'], ['', 'testevc1eemsigncom.crt', 'https://testevc1e.emsign.com', 'Expired']] },
+        { n: 'emSign Class 1 CA - C1', c: 'emSignClass1CAC1.crt', r: 'emSignClass1CAC1.crl', f: '0E:F7:B8:63:FA:AB:C3:84:A6:94:FF:63:2D:AA:F9:BD:31:CE:D2:3E:92:46:55:9A:59:EC:D7:47:27:54:CC:E6' },
+        { n: 'emSign Class 2 CA - C1', c: 'emSignClass2CAC1.crt', r: 'emSignClass2CAC1.crl', f: '05:B3:0B:3F:C4:4F:85:75:33:4B:D8:12:EF:9F:A8:A5:2A:75:74:3E:19:BC:35:A5:BE:39:12:EC:A6:2C:46:69' },
+        { n: 'emSign Class 3 CA - C1', c: 'emSignClass3CAC1.crt', r: 'emSignClass3CAC1.crl', f: '69:B0:DD:09:B9:8F:36:A9:CC:7B:D7:FF:E8:A0:0D:CD:31:9A:5F:C9:47:C9:C8:AF:72:C9:28:94:D8:E8:10:92' },
+        { n: 'emSign Device CA - C1', c: 'emSignDeviceCAC1.crt', r: 'emSignDeviceCAC1.crl', f: 'D0:34:B1:87:51:BE:E1:0A:AA:F9:4C:2F:14:35:0D:3F:65:4E:5B:93:4D:0D:DA:59:2B:31:E5:81:87:A4:89:52' },
+        { n: 'emSign Time Stamping CA - C1', c: 'emsigntsac1.crt', r: 'emsigntsac1.crl', f: '4D:15:E5:19:9D:88:EA:B1:83:8E:06:EB:A0:8B:C6:90:E9:71:B4:B1:FC:D7:7A:65:30:E9:C0:6F:17:FD:F4:77' },
+        { n: 'Soft-Net Secure Signing CA - C1', c: 'softnetsecuresignc1.crt', r: 'softnetsecuresignc1.crl', f: 'CC:EC:15:7D:A0:F0:BD:58:E3:E8:B5:84:05:4F:E0:C4:4F:04:B4:DD:8C:97:B7:5B:78:8D:91:40:B0:51:42:F7' },
+        { p: 'qtsp', n: 'UAE QTSP Qualified eSignature CA (NP)', c: 'UAE-QTSP-Qualified-eSignature-CA-NP.crt', r: 'uaeqtspqualifiedesignaturecanp.crl', f: '8C:57:10:BF:16:01:91:97:95:67:3E:9F:F9:7F:9C:19:AC:C7:FA:47:8E:9E:99:CB:6C:F5:B6:12:A9:6C:69:7B' },
+        { p: 'qtsp', n: 'UAE QTSP Qualified eSignature CA NP-QSCD', c: 'UAE-QTSP-Qualified-eSignature-CA-NP-QSCD.crt', r: 'uaeqtspqualifiedesignaturecanpqscd.crl', f: 'DB:9F:48:A5:31:06:A0:6A:00:47:2F:F1:82:91:45:02:FE:5C:81:6B:BC:4B:B5:46:83:32:39:69:19:BE:E5:71' },
+        { p: 'qtsp', n: 'UAE QTSP Qualified eSeal CA LP', c: 'UAE-QTSP-Qualified-eSeal-CA-LP.crt', r: 'uaeqtspqualifiedesealcalp.crl', f: 'E3:47:3A:EC:EF:10:8B:1E:E6:F4:9E:17:7B:25:02:36:05:A0:C0:41:B1:D9:7A:9F:59:CF:FC:00:D2:2E:02:51' },
+        { p: 'qtsp', n: 'UAE QTSP Qualified eSeal CA LP-QSCD', c: 'UAE-QTSP-Qualified-eSeal-CA-LP-QSCD.crt', r: 'uaeqtspqualifiedesealcalpqscd.crl', f: '6B:1E:A2:DE:E0:F3:4A:7E:53:D6:4E:BB:F3:9C:58:3D:AF:94:18:D8:3A:5A:A9:E6:25:8E:4F:2B:E7:07:B3:6E' },
+        { p: 'qtsp', n: 'UAE QTSP Advanced CA', c: 'UAE-QTSP-Advanced-CA.crt', r: 'uaeqtspadvancedca.crl', f: '02:9F:54:FD:DC:7E:C4:92:74:70:37:A5:24:E9:D6:A1:3C:80:23:6D:53:48:7E:75:C4:ED:CC:19:1E:FE:70:BB' },
+        { p: 'qtsp', n: 'UAE QTSP Device and Management CA', c: 'UAE-QTSP-Device-and-Management-CA.crt', r: 'uaeqtspdeviceandmanagementca.crl', f: 'D9:65:6F:4E:4D:83:F6:27:83:D9:AD:E6:01:04:EE:D9:0D:9C:C5:0C:29:A6:EF:0A:78:36:77:51:D2:F8:C7:48' },
+        { p: 'qtsp', n: 'UAE QTSP TSA Issuing CA', c: 'UAE-QTSP-TSA-Issuing-CA.crt', r: 'uaeqtsptsaissuingca.crl', f: '40:74:18:90:4F:71:B2:A0:B2:E3:5F:45:AD:88:C3:11:25:B1:C5:21:31:D4:F7:2F:A8:21:F8:3A:47:1D:C8:40' },
+        { p: 'qtsp', n: 'UAE QTSP Validation Service CA', c: 'UAE-QTSP-Validation-Service-CA.crt', r: 'uaeqtspvalidationserviceca.crl', f: '32:13:CE:37:22:4C:4E:95:4D:AA:AE:ED:DA:09:8E:B7:08:91:1D:05:48:FD:3E:30:ED:8F:FC:18:41:BD:5D:65' }
+      ] },
+    { program: 'emsign', root: { n: 'emSign Root CA - C2', c: 'emSignRootCAC2.crt', r: 'RootCAC2.crl', f: '46:CD:08:3B:47:E8:04:02:02:8D:F4:93:96:0E:A1:9C:85:FE:85:19:50:D5:16:5F:1C:7D:A4:FA:A9:51:E2:F8' },
+      subs: [
+        { n: 'emSign CS CA - C2', c: 'emSignCSCAC2.crt', r: 'emSignCSCAC2.crl', f: 'B0:E6:BB:9D:6E:7A:94:BC:4A:6B:89:D9:67:43:43:8D:2C:56:5D:BB:0A:69:7A:BB:21:45:7A:CA:22:A1:3C:E4' },
+        { n: 'emSign EV CS CA - C2', c: 'emSignEVCSCAC2.crt', r: 'emSignEVCSCAC2.crl', f: '02:49:98:10:12:10:64:4F:68:FA:E9:11:55:43:A5:E6:D2:6A:6D:B0:D2:C1:03:66:FF:2D:5B:B5:05:D8:87:2D' },
+        { n: 'emSign Time Stamping CA - C2', c: 'emSignTSACAC2.crt', r: 'emSignTSACAC2.crl', f: '57:1F:C7:06:54:AB:8C:1A:A3:B4:A2:61:A3:D5:05:FA:E1:0B:C4:55:8F:A1:7C:72:84:9B:6B:98:BC:84:5C:AE' }
+      ] },
+    { program: 'emsign', root: { n: 'emSign ECC Root CA - C3', c: 'emSignECCRootCAC3.crt', r: 'RootCAC3.crl', f: 'BC:4D:80:9B:15:18:9D:78:DB:3E:1D:8C:F4:F9:72:6A:79:5D:A1:64:3C:A5:F1:35:8E:1D:DB:0E:DC:0D:7E:B3' },
+      subs: [
+        { n: 'emSign ECC SSL CA - C3', c: 'emSignECCSSLCAC3.crt', r: 'emSignECCSSLCAC3.crl', f: 'A0:61:D4:45:39:97:14:C3:8F:C1:01:A6:E9:AF:BD:B3:81:F1:12:FA:5D:E7:D5:BC:14:90:45:58:D1:ED:32:76', t: [['', 'testovc3emsigncom.crt', 'https://testovc3.emsign.com'], ['', 'testovc3remsigncom.crt', 'https://testovc3r.emsign.com', 'Revoked'], ['', 'testovc3eemsigncom.crt', 'https://testovc3e.emsign.com', 'Expired']] },
+        { n: 'emSign ECC EV SSL CA - C3', c: 'emSignECCEVSSLCAC3.crt', r: 'emSignECCEVSSLCAC3.crl', f: 'C0:A5:78:F2:10:9E:6F:42:D3:D9:39:94:8D:EE:AB:72:9B:20:F7:B2:3B:42:37:AB:D8:49:4D:F5:54:CF:98:5C', t: [['', 'testevc3emsigncom.crt', 'https://testevc3.emsign.com'], ['', 'testevc3remsigncom.crt', 'https://testevc3r.emsign.com', 'Revoked'], ['', 'testevc3eemsigncom.crt', 'https://testevc3e.emsign.com', 'Expired']] },
+        { n: 'emSign ECC CS CA - C3', c: 'emSignECCCSCAC3.crt', r: 'emSignECCCSCAC3.crl', f: 'A3:AF:D7:23:75:C1:D7:A8:33:0E:62:D5:77:E1:35:81:B7:23:32:C8:06:2D:FA:9C:F3:9E:51:AE:65:08:85:82' },
+        { n: 'emSign ECC EV CS CA - C3', c: 'emSignECCEVCSCAC3.crt', r: 'emSignECCEVCSCAC3.crl', f: 'CB:21:09:79:92:40:20:97:03:37:AE:32:DA:5C:3F:98:1A:9E:05:71:4E:C2:2B:B1:C3:42:1F:E6:95:E5:15:7A' },
+        { n: 'emSign ECC Class 1 CA - C3', c: 'emSignECCClass1CAC3.crt', r: 'emSignECCClass1CAC3.crl', f: 'FA:D2:E9:86:49:F1:C6:06:15:0F:55:26:9E:BC:03:5A:EA:22:FF:AC:13:1D:E6:4B:A6:90:0C:75:D8:44:7B:7E' },
+        { n: 'emSign ECC Class 2 CA - C3', c: 'emSignECCClass2CAC3.crt', r: 'emSignECCClass2CAC3.crl', f: 'DB:45:91:F8:78:F6:67:2F:5B:70:73:3A:66:AD:7C:95:37:B9:7E:6F:0A:F5:CA:49:AA:B8:EC:B2:CE:02:F8:6B' },
+        { n: 'emSign ECC Class 3 CA - C3', c: 'emSignECCClass3CAC3.crt', r: 'emSignECCClass3CAC3.crl', f: '5A:9A:03:F2:D3:FE:58:9B:E6:3C:DA:11:82:0A:9F:25:F0:74:C9:20:34:F5:1C:04:7D:34:22:6D:25:2E:C0:25' },
+        { n: 'emSign ECC Time stamping CA - C3', c: 'emSignECCTSACAC3.crt', r: 'emSignECCTSACAC3.crl', f: '71:D2:EE:4D:DA:25:1D:92:44:F7:CE:7C:6D:47:8E:C5:52:D4:24:EF:71:9F:02:B7:10:30:F2:82:1B:6B:C8:53' },
+        { n: 'emSign ECC Device CA - C3', c: 'emSignECCDeviceCAC3.crt', r: 'emSignECCDeviceCAC3.crl', f: '3D:45:11:D0:A8:0A:A9:49:A6:D9:9B:25:3A:17:34:71:79:7C:44:59:18:7A:63:29:E7:36:C3:7C:B5:49:3E:46' }
+      ] },
+    { program: 'emsign', root: { n: 'emSign Root Client Auth G1', c: 'rootclientauthcag1.crt', r: 'rootclientauthcag1.crl', f: '8A:BF:C4:0F:AE:AF:13:CB:C8:BB:67:B6:1C:8D:09:7A:32:1C:D2:FE:E0:47:C5:42:56:92:7E:0F:8B:FE:AD:FD' },
+      subs: [
+        { n: 'emSign Client Auth CA - G1', c: 'emSignClientAuthCAG1.crt', r: 'emSignClientAuthCAG1.crl', f: 'A2:F8:EA:75:37:CD:5A:F8:0D:04:84:97:A4:32:DE:59:07:AE:E5:27:85:D0:70:61:46:2F:C5:11:46:7B:E7:20' }
+      ] },
+    { program: 'emsign', root: { n: 'emSign Root Client Auth G3', c: 'rootclientauthcag3.crt', r: 'rootclientauthcag3.crl', f: 'BB:D8:B3:D7:45:EF:B7:91:98:D9:3B:9C:48:2B:9D:93:45:37:32:57:29:EA:2F:02:C1:29:26:1F:91:BE:2E:3D' },
+      subs: [
+        { n: 'emSign Client Auth CA - G3', c: 'emSignClientAuthCAG3.crt', r: 'emSignClientAuthCAG3.crl', f: '29:97:C3:2B:EF:C8:DF:BF:C1:59:81:15:44:43:E6:3D:5C:06:62:0A:D4:08:EE:41:08:2B:A0:66:9C:06:4C:FA' }
+      ] },
+    { program: 'emsign', root: { n: 'emSign Root CS CA - G2', c: 'rootcscag2.crt', r: 'rootcscag2.crl', f: '0D:74:EF:67:C8:8D:E3:56:03:65:E2:25:AE:F9:76:F9:15:E9:01:34:7B:73:35:2D:81:AB:5B:41:32:BB:21:50' },
+      subs: [
+        { n: 'emSign CS CA - G2', c: 'emSignCSCRCAG2.crt', r: 'emSignCSCRCAG2.crl', f: 'C5:8E:88:B2:83:F4:C1:1B:08:FD:BE:F3:96:C6:24:2F:50:C5:1F:4E:21:90:F4:07:51:FD:69:83:E9:EF:A8:E2' },
+        { n: 'EM OV CS CA - G2A-1', c: 'EMOVCSCAG2A1.crt', r: 'EMOVCSCAG2A1.crl', f: '6C:E3:E4:33:27:FD:66:94:70:7C:1B:87:34:6E:26:F0:BB:DA:E8:08:74:4D:39:82:1B:E5:30:FE:90:C1:D3:10' },
+        { n: 'EM OV CS CA - G2B', c: 'EMOVCSCAG2B.crt', r: 'EMOVCSCAG2B.crl', f: '91:3F:1A:04:B0:28:14:B6:04:AC:52:75:AC:B2:01:B1:C8:02:B2:C0:F1:B4:98:6F:B1:A1:EB:59:59:58:E0:72' },
+        { n: 'EM OV CS CA - G2C', c: 'EMOVCSCAG2C.crt', r: 'EMOVCSCAG2C.crl', f: 'EB:AC:91:B8:EC:98:53:32:37:79:ED:B3:93:C5:95:FA:DB:29:DD:4D:DB:20:C4:7E:33:6F:2A:02:16:84:F2:7B' }
+      ] },
+    { program: 'emsign', root: { n: 'emSign Root CS CA - G3', c: 'rootcscag3.crt', r: 'rootcscag3.crl', f: 'F2:ED:AA:FF:3D:9B:70:1F:B4:D1:4C:9F:28:5F:8C:0B:AD:90:FC:3B:CC:1F:A0:7D:47:F4:71:8E:DA:BA:34:A5' },
+      subs: [
+        { n: 'emSign CS CA - G3', c: 'emSignCSCAG3.crt', r: 'emSignCSCAG3.crl', f: '94:5C:AA:76:8E:F2:9E:F4:E8:9E:C7:EA:1E:9B:F0:AE:DC:1F:F8:F8:9B:9A:F8:D1:C7:6E:70:FF:CD:4E:18:AE' },
+        { n: 'EM OV CS CA - G3A-1', c: 'EMOVCSCAG3A1.crt', r: 'EMOVCSCAG3A1.crl', f: 'F3:E5:25:E5:1E:2B:B2:7C:AB:00:3D:87:45:66:B0:B7:76:2B:7E:AC:5B:EB:C8:CD:DF:DF:F8:B2:6A:D4:30:C3' },
+        { n: 'EM OV CS CA - G3B', c: 'EMOVCSCAG3B.crt', r: 'EMOVCSCAG3B.crl', f: '9E:39:DE:28:81:27:3A:CC:22:5A:14:9C:72:BA:3E:0F:51:42:49:63:66:9A:B6:33:EE:1D:C7:DF:5D:B0:67:B4' },
+        { n: 'EM OV CS CA - G3C', c: 'EMOVCSCAG3C.crt', r: 'EMOVCSCAG3C.crl', f: '4B:24:60:A4:66:F9:5F:D4:01:13:BC:DC:CA:2C:EB:29:B3:B0:93:92:1D:E4:54:74:DA:7D:F4:88:74:C6:30:B1' }
+      ] },
+    { program: 'emsign', root: { n: 'emSign Root SMIME CA - G1', c: 'rootsmimecag1.crt', r: 'rootsmimecag1.crl', f: '47:91:1B:C8:F3:2A:11:B0:29:E0:BB:10:A3:48:B4:59:40:4B:87:73:1B:87:0A:2F:3F:A9:7B:47:05:DC:4C:25' },
+      subs: [
+        { n: 'emSign SMIME CA - G1', c: 'emSignSMIMECRCAG1.crt', r: 'emSignSMIMECRCAG1.crl', f: 'B9:E2:58:8E:93:B5:E5:36:17:B8:42:E6:ED:34:85:4E:E4:6B:A3:D6:72:1E:C4:5D:C6:50:CE:44:39:F5:14:BE' }
+      ] },
+    { program: 'emsign', root: { n: 'emSign Root SMIME CA - G3', c: 'rootsmimecag3.crt', r: 'rootsmimecag3.crl', f: 'F7:6A:0D:44:0C:41:8D:C5:B3:62:BE:8E:11:E0:A5:D0:60:23:F4:39:60:93:E4:F4:55:82:7B:F5:51:53:D8:A4' },
+      subs: [
+        { n: 'emSign SMIME CA - G3', c: 'emSignSMIMECAG3.crt', r: 'emSignSMIMECAG3.crl', f: '30:44:4F:40:CA:C2:6F:FF:49:7B:1C:D0:0D:DF:4D:81:45:3A:8A:17:62:72:CC:34:AB:E3:5F:D5:64:60:2B:1B' }
+      ] },
+    /* The InCommon intermediates chain to this same root, so they are listed
+       here rather than as a second hierarchy over the same certificate. */
+    { program: 'emsign', programs: ['emsign', 'incommon'],
+      root: { n: 'emSign Root TLS CA - G1', c: 'roottlscag1.crt', r: 'roottlscag1.crl', f: 'CE:F7:1E:70:B7:C2:9A:DD:F6:C3:0C:D1:9E:61:4B:38:FD:5F:02:A4:35:A0:EE:DD:D0:08:7E:18:3D:10:1A:51' },
+      subs: [
+        { n: 'emSign TLS CA - G1', c: 'emSignTLSCAG1.crt', r: 'emSignTLSCAG1.crl', f: 'DE:02:9E:40:F6:BB:85:1D:A4:B8:04:C6:51:21:D8:53:50:84:FD:F6:B3:B4:7D:DF:7E:94:B4:E4:6A:6C:34:37', t: [['EV', 'testevg1-cr.emsign.com.crt', 'https://testevg1-cr.emsign.com'], ['EV', 'testevg1r-cr.emsign.com.crt', 'https://testevg1r-cr.emsign.com', 'Revoked'], ['EV', 'testevg1e-cr.emsign.com.crt', 'https://testevg1e-cr.emsign.com', 'Expired'], ['OV', 'testovg1-cr.emsign.com.crt', 'https://testovg1-cr.emsign.com'], ['OV', 'testovg1r-cr.emsign.com.crt', 'https://testovg1r-cr.emsign.com', 'Revoked'], ['OV', 'testovg1e-cr.emsign.com.crt', 'https://testovg1e-cr.emsign.com', 'Expired']] },
+        { n: 'EM DV TLS CA - G2A-1', c: 'EMDVTLSCAG2A1.crt', r: 'EMDVTLSCAG2A1.crl', f: '3F:13:59:7D:33:55:D3:41:BD:09:32:8A:EE:56:7D:7F:4E:00:2D:99:19:B9:86:F9:96:2D:AF:F1:97:EA:75:D1' },
+        { n: 'EM DV TLS CA - G2B', c: 'EMDVTLSCAG2B.crt', r: 'EMDVTLSCAG2B.crl', f: '82:9E:C4:44:B8:BE:3D:FD:2D:03:0A:0D:9E:7A:1D:0D:D2:A3:C2:C3:25:D3:95:89:C2:7A:C9:A0:65:BA:E7:93' },
+        { n: 'EM DV TLS CA - G2C', c: 'EMDVTLSCAG2C.crt', r: 'EMDVTLSCAG2C.crl', f: '04:27:EA:3C:B4:A7:B4:CB:20:5E:77:A7:B1:66:D3:32:BE:DB:8E:8E:F4:69:BC:5E:88:31:69:C8:D0:AC:87:6D' },
+        { n: 'EM OV TLS CA - G2A-1', c: 'EMOVTLSCAG2A1.crt', r: 'EMOVTLSCAG2A1.crl', f: '29:18:04:EC:86:68:37:CD:5A:F5:F4:D6:52:F1:DC:C7:9B:EC:62:2D:4F:9B:F4:87:0E:5E:4D:86:39:DF:3A:D4' },
+        { n: 'EM OV TLS CA - G2B', c: 'EMOVTLSCAG2B.crt', r: 'EMOVTLSCAG2B.crl', f: '6A:7A:93:86:19:82:B6:64:00:17:10:A0:EF:D0:4C:8A:72:F6:A2:3E:25:2B:28:09:11:79:7E:0B:F1:BD:90:12' },
+        { n: 'EM OV TLS CA - G2C', c: 'EMOVTLSCAG2C.crt', r: 'EMOVTLSCAG2C.crl', f: 'DE:76:77:92:E8:70:BD:32:F3:31:02:9F:C8:9D:C2:4C:53:F9:DF:97:0D:C7:0F:1E:A3:0C:F2:9D:B3:F9:4B:A9' },
+        { n: 'EM EV TLS CA - G2A-1', c: 'EMEVTLSCAG2A1.crt', r: 'EMEVTLSCAG2A1.crl', f: '68:4B:11:E5:6A:B7:25:02:B7:5D:AC:A1:CD:00:9E:3D:D4:BE:AB:3A:C1:FE:44:89:02:D2:72:76:6C:CA:79:7E' },
+        { n: 'EM EV TLS CA - G2B', c: 'EMEVTLSCAG2B.crt', r: 'EMEVTLSCAG2B.crl', f: 'E0:72:B3:0D:7F:5B:8B:CF:00:80:E5:1D:6C:C7:76:57:67:07:2D:B2:31:9E:9B:B1:CD:3D:02:A0:86:89:87:50' },
+        { n: 'EM EV TLS CA - G2C', c: 'EMEVTLSCAG2C.crt', r: 'EMEVTLSCAG2C.crl', f: 'C3:BC:2B:48:0F:B1:A1:AB:4D:0B:A1:ED:6C:7B:53:E0:96:44:70:45:73:36:20:99:1A:32:D6:79:8D:77:AA:20' },
+        { p: 'incommon', n: 'InCommon Intermediate CA - DVG2C', c: 'EEEMIncommonDVG2C.crt', r: 'EEEMIncommonDVG2C.crl', f: '83:09:05:81:23:07:DF:14:C3:D9:D7:1B:9A:5A:83:24:79:40:85:7D:D2:0B:F6:D6:7F:64:93:D2:07:0D:A6:49' },
+        { p: 'incommon', n: 'InCommon Intermediate CA - OVG2C', c: 'EEEMIncommonOVG2C.crt', r: 'EEEMIncommonOVG2C.crl', f: 'BA:02:F2:F9:7B:A4:81:D1:9E:D4:90:6B:AB:56:02:A9:CE:1C:CE:5D:1F:36:2E:B5:EC:4F:9D:82:8E:F0:9F:FC' },
+        { p: 'incommon', n: 'InCommon Intermediate CA - EVG2C', c: 'EEEMIncommonEVG2C.crt', r: 'EEEMIncommonEVG2C.crl', f: 'A8:35:59:D8:92:F4:69:2D:A9:A0:88:A1:B7:59:77:30:15:D7:AA:6F:B2:B5:0B:18:C5:F9:F8:9C:C2:76:31:E1' },
+        { p: 'incommon', n: 'InCommon RSA IGTF Server CA 4', c: 'EEEMIncommonIGTFOVG2C.crt', r: 'EEEMIncommonIGTFOVG2C.crl', f: 'F1:A7:8E:13:D7:AB:31:07:2E:22:39:18:D2:57:B5:41:01:0A:D9:3A:E6:D3:9F:3D:74:A0:D8:B2:EE:4C:3E:7D' }
+      ] },
+    { program: 'emsign', programs: ['emsign', 'incommon'],
+      root: { n: 'emSign Root TLS CA - G3', c: 'roottlscag3.crt', r: 'roottlscag3.crl', f: '7D:D7:8D:5F:4F:13:45:9A:83:DF:F9:AB:BB:A6:2E:DB:AF:6F:2D:10:2B:F2:57:FD:71:2F:4D:9F:27:46:ED:8D' },
+      subs: [
+        { n: 'emSign TLS CA - G3', c: 'emSignTLSCAG3.crt', r: 'emSignTLSCAG3.crl', f: '04:E6:DE:A2:61:B8:72:0E:05:25:E9:DA:23:28:21:00:35:2B:DE:BC:11:9C:FC:3D:BD:81:2C:3D:68:A2:BC:DD', t: [['EV', 'testevg3-cr.emsign.com.crt', 'https://testevg3-cr.emsign.com'], ['EV', 'testevg3r-cr.emsign.com.crt', 'https://testevg3r-cr.emsign.com', 'Revoked'], ['EV', 'testevg3e-cr.emsign.com.crt', 'https://testevg3e-cr.emsign.com', 'Expired'], ['OV', 'testovg3-cr.emsign.com.crt', 'https://testovg3-cr.emsign.com'], ['OV', 'testovg3r-cr.emsign.com.crt', 'https://testovg3r-cr.emsign.com', 'Revoked'], ['OV', 'testovg3e-cr.emsign.com.crt', 'https://testovg3e-cr.emsign.com', 'Expired']] },
+        { n: 'EM DV TLS CA - G3A-1', c: 'EMDVTLSCAG3A1.crt', r: 'EMDVTLSCAG3A1.crl', f: '48:96:D5:1F:65:37:A5:32:62:72:C4:12:BC:75:99:0E:15:D4:F5:EC:DC:29:46:C1:97:76:92:3B:8E:16:9E:93' },
+        { n: 'EM DV TLS CA - G3B', c: 'EMDVTLSCAG3B.crt', r: 'EMDVTLSCAG3B.crl', f: '42:C4:AC:CD:12:C4:F5:95:97:92:5E:1A:08:A7:A9:01:02:60:85:43:80:93:08:D5:0E:C4:27:E1:18:BA:14:93' },
+        { n: 'EM DV TLS CA - G3C', c: 'EMDVTLSCAG3C.crt', r: 'EMDVTLSCAG3C.crl', f: '01:64:D7:CE:AE:5B:B9:09:C2:72:AF:15:1F:F4:4B:11:77:AE:9B:47:D9:42:4B:94:F1:D9:55:8C:30:93:4D:19' },
+        { n: 'EM OV TLS CA - G3A-1', c: 'EMOVTLSCAG3A1.crt', r: 'EMOVTLSCAG3A1.crl', f: '25:9F:F0:96:3A:06:65:BF:40:D9:2E:05:E9:5B:96:0C:CB:42:3D:BD:11:74:82:AE:64:7B:C7:FD:5F:5C:E6:44' },
+        { n: 'EM OV TLS CA - G3B', c: 'EMOVTLSCAG3B.crt', r: 'EMOVTLSCAG3B.crl', f: '98:B8:96:62:5C:0C:23:0A:DE:EC:3E:B2:CF:6A:AD:50:01:EC:F9:15:6A:68:64:4E:82:37:4C:E5:83:3B:C2:5B' },
+        { n: 'EM OV TLS CA - G3C', c: 'EMOVTLSCAG3C.crt', r: 'EMOVTLSCAG3C.crl', f: 'CB:6E:15:16:5A:C8:02:E9:B3:F9:93:F1:6C:25:D4:1F:4E:81:C2:1E:BD:E7:1A:E1:B0:12:AC:00:BF:9C:7C:3F' },
+        { n: 'EM EV TLS CA - G3A-1', c: 'EMEVTLSCAG3A1.crt', r: 'EMEVTLSCAG3A1.crl', f: 'BA:0A:3D:A7:06:F4:7D:AC:1A:9C:33:C4:EE:1E:4D:86:B7:26:EF:48:E7:0D:43:19:F3:C9:49:EC:67:3A:19:75' },
+        { n: 'EM EV TLS CA - G3B', c: 'EMEVTLSCAG3B.crt', r: 'EMEVTLSCAG3B.crl', f: 'E7:56:8F:E6:E1:23:31:F4:FD:7D:E6:1D:A4:C7:55:9D:0F:8E:B1:92:A2:18:D4:74:1A:3B:A7:51:84:33:38:38' },
+        { n: 'EM EV TLS CA - G3C', c: 'EMEVTLSCAG3C.crt', r: 'EMEVTLSCAG3C.crl', f: '43:2E:C2:5F:0D:28:DE:90:06:D9:7B:F7:52:F1:7B:BB:2C:D4:1F:66:99:33:FC:B0:72:D9:A1:14:8D:02:61:F3' },
+        { p: 'incommon', n: 'InCommon Intermediate CA - DVG3C', c: 'EEEMIncommonDVG3C.crt', r: 'EEEMIncommonDVG3C.crl', f: '34:60:C0:2F:0B:4B:06:C2:73:9C:B0:DE:17:B4:10:62:B9:45:15:D8:37:65:2A:EB:FF:77:AE:87:E0:93:0C:FF' },
+        { p: 'incommon', n: 'InCommon Intermediate CA - OVG3C', c: 'EEEMIncommonOVG3C.crt', r: 'EEEMIncommonOVG3C.crl', f: '56:6B:3A:F3:CB:66:63:A9:F9:E2:1E:EF:82:08:89:C2:D1:A4:EA:2F:7D:F0:B7:BB:0D:50:60:24:98:70:FA:08' },
+        { p: 'incommon', n: 'InCommon Intermediate CA - EVG3C', c: 'EEEMIncommonEVG3C.crt', r: 'EEEMIncommonEVG3C.crl', f: '5F:2F:05:0F:9C:DD:92:8F:E5:01:02:24:47:33:CB:A7:EA:72:20:4D:9A:76:86:94:9C:E5:9E:40:2A:D1:AA:B9' }
+      ] },
+    { program: 'tsa', root: { n: 'emSign Root TSA CA - G2', c: 'roottsacag2.crt', r: 'roottsacag2.crl', f: '19:97:77:0A:56:33:FB:6D:04:40:AB:F7:D7:E8:7E:15:D7:95:F0:94:F8:C2:95:9D:AD:B0:0E:78:58:66:BF:48' },
+      subs: [
+        { n: 'emSign TSA CA - G2', c: 'emSignTSACRCAG2.crt', r: 'emSignTSACRCAG2.crl', f: 'D4:31:78:53:D2:06:E7:C3:36:5A:BC:63:1D:F8:BB:40:95:14:F2:A4:1B:01:A4:60:1E:2F:67:37:BC:CB:14:57' }
+      ] },
+    { program: 'tsa', root: { n: 'emSign Root TSA CA - G3', c: 'roottsacag3.crt', r: 'roottsacag3.crl', f: '75:D2:CE:75:97:9C:F2:A4:3B:17:2C:9F:89:F7:33:DD:A2:13:60:31:DB:4B:BF:36:98:B0:53:71:4C:07:71:55' },
+      subs: [
+        { n: 'emSign TSA CA - G3', c: 'emSignTSACAG3.crt', r: 'emSignTSACAG3.crl', f: '7D:9E:39:51:56:8A:20:EF:05:B4:88:0F:FF:B4:1D:2E:61:AA:A7:40:1A:7E:67:C1:9A:3B:9C:71:50:3E:57:05' }
+      ] },
+    { program: 'private', root: { n: 'emSign Trusted Root CA - C4', c: 'TrustedRootCAC4.crt', r: 'TrustedRootCAC4.crl', f: 'C6:26:09:0F:D4:8D:DB:F2:EE:E3:27:E6:A3:D2:CA:78:BD:35:0C:1F:AF:0C:EF:F0:15:D8:34:C3:BD:17:6A:B0' },
+      subs: [
+        { n: 'SoftNet Secure Signing CA - C4', c: 'softnetsecuresignc4.crt', r: 'softnetsecuresignc4.crl', f: '8A:52:3C:FE:A0:32:47:4E:F8:2A:28:7B:1B:9C:BC:5C:38:76:4F:30:95:65:91:64:5F:7A:5B:86:87:6A:E3:B2' },
+        { n: 'emSign Trusted Issuing CA - C4', c: 'trustedissuingcac4.crt', r: 'trustedissuingcac4.crl', f: '97:9E:C3:50:88:D4:0B:CF:6A:1E:4E:66:2C:00:77:11:0E:04:F6:D4:AF:A3:B4:16:22:BD:E5:34:03:8B:D2:6D' },
+        { n: 'emSign Issuing CA IGTF - C4', c: 'emigtfc4.crt', r: 'emigtfc4.crl', f: '4B:13:28:7D:C4:F1:D2:09:D9:60:78:7A:64:5A:D4:9D:8E:E2:F9:26:BD:A1:F3:08:E3:2A:77:C6:60:B7:89:B1' }
+      ] },
+    { program: 'private', root: { n: 'emSign Trusted Root CA - C5', c: 'TrustedRootCAC5.crt', r: 'TrustedRootCAC5.crl', f: 'BE:0C:7A:1E:9E:D5:99:90:C3:06:00:95:C2:D6:A9:FD:55:A6:E9:44:87:28:F3:23:5C:7C:3C:01:08:FA:2F:43' },
+      subs: [
+        { n: 'emSign Issuing CA IGTF - C5', c: 'emigtfc5.crt', r: 'emigtfc5.crl', f: 'AA:2F:F6:07:B8:01:CC:1D:88:57:37:C5:0D:27:DC:2B:64:CB:DA:06:6E:4C:47:54:2D:05:79:4C:D7:D9:D0:AC' },
+        { n: 'emSign Issuing CA IGTF - C5 - 1', c: '4C7.crt', r: 'https://crl.private.emsign.com?4C7.crl', f: '98:30:B5:12:46:26:A9:97:97:F4:B9:5A:55:14:47:71:C7:4A:3B:C3:EC:90:43:0F:63:9E:0F:96:1E:75:B6:1F' },
+        { n: 'AECB Issuing CA - C5', c: 'aecbc5.crt', r: 'aecbc5.crl', f: 'B3:BD:7B:85:FD:03:15:D3:C0:99:F0:BA:AE:EC:56:70:90:AC:24:B9:E3:E9:ED:EA:AF:01:49:EA:2A:3A:4A:6A' }
+      ] },
+    { program: 'private', root: { n: 'Kenya Root CA 2022', c: 'kenyaRootCA2022.crt', r: 'http://rootca.go.ke/crls/kenyarootca2022.crl', f: '7E:79:CC:08:0C:64:C0:44:0E:BE:EF:93:C5:8D:EE:AA:7F:26:85:64:37:EE:EC:1F:11:40:5A:2B:E9:DD:F0:A4' },
+      subs: [
+        { n: 'emSign Kenya CA - C1', c: 'emSignKencyaCAC1.crt', r: 'emsignkenya2022.crl', f: 'A4:65:B8:23:18:AC:9B:2D:42:D4:8F:4B:4E:97:3C:06:D8:F6:1D:61:61:28:AD:C8:EE:96:67:9B:FD:F0:14:78' },
+        { n: 'eMudhra Kenya Secure Signing CA - C4', c: 'eMudhraKenyaSecureSigningCAC4.crt', r: 'emudhrakenyasecurec4.crl', f: '59:17:CE:D3:88:74:02:08:8F:B8:38:44:87:EB:71:BE:06:00:74:11:2E:18:1C:BC:23:77:59:1F:D2:91:4B:C2' },
+        { n: 'eMudhra Kenya Document Signing CA - C1', c: 'eMudhraKenyaDocumentSigningCAC1CS.crt', r: 'emudhrakenyadocc1.crl', f: '27:4D:79:07:EC:A6:4A:A5:E7:1F:06:7A:EE:7D:F9:D6:42:3F:AB:D6:2A:CF:6B:38:D5:05:6F:33:05:55:53:82' }
+      ] },
+    { program: 'private', root: { n: 'CCA Mauritius 2019', c: 'ccaMauritius2019.cer', r: 'http://ocsp.cca.mu/crl/cca.crl', f: '0B:11:0B:A3:79:1E:18:DD:A8:FD:8F:56:E1:82:F2:88:B6:8B:E7:7C:B9:19:D4:BA:FB:81:5A:00:43:46:82:56' },
+      subs: [
+        { n: 'eMudhra Mauritius CA 2022', c: 'eMudhraMauritiusCA2022.crt', r: 'emudhramu2022.crl', f: '92:9B:D0:A3:7F:9A:55:37:56:82:7C:59:A3:22:14:40:D2:D6:EE:BE:E1:F7:DD:7B:0A:B0:E5:B5:3D:7E:ED:F2' },
+        { n: 'eMudhra Mauritius Document Signing CA - C1', c: 'eMudhraMauritiusDocumentSigningCA-C1.crt', r: 'emudhramudocumentc1.crl', f: 'F5:A5:5E:7E:6F:A7:5B:01:5B:4C:64:49:45:E3:44:24:3C:ED:1E:DA:6D:30:37:8A:A6:30:73:86:1C:C3:D9:11' },
+        { n: 'eMudhra Mauritius Secure Signing CA - C4', c: 'eMudhraMauritiusSecureSigningCA-C4.crt', r: 'emudhramusecurec4.crl', f: '50:DC:E0:96:E2:7E:FD:A8:60:CB:11:BF:5B:E3:5E:18:19:C7:44:5B:F1:76:7B:88:0B:F2:0C:57:86:42:50:1E' }
+      ] }
+  ];
+
+  /* ---------- state ---------- */
+  var state = { program: 'all', cat: 'all', q: '' };
+  /* CA groups the user expanded, so the state survives re-renders */
+  var openGroups = {};
+  /* result counts, shared between the two sections for cross-referencing */
+  var docShown = 0, certShown = 0, tsuShown = 0;
+
+  /* read shareable state from the URL hash, e.g. #program=qtsp&cat=cpcps&q=root */
+  (function () {
+    var h = location.hash.replace(/^#/, '');
+    if (!h) return;
+    h.split('&').forEach(function (pair) {
+      var kv = pair.split('=');
+      var k = decodeURIComponent(kv[0] || '');
+      var v = decodeURIComponent(kv[1] || '');
+      if (k === 'program' && (v === 'all' || PROGRAMS[v])) state.program = v;
+      if (k === 'cat' && (v === 'all' || CATS[v])) state.cat = v;
+      if (k === 'q') state.q = v;
+    });
+  })();
+
+  function syncHash() {
+    var parts = [];
+    if (state.program !== 'all') parts.push('program=' + encodeURIComponent(state.program));
+    if (state.cat !== 'all') parts.push('cat=' + encodeURIComponent(state.cat));
+    if (state.q) parts.push('q=' + encodeURIComponent(state.q));
+    history.replaceState(null, '', parts.length ? '#' + parts.join('&') : location.pathname + location.search);
+  }
+
+  function announce(msg) { document.getElementById('live').textContent = msg; }
+
+  var ICO_PDF = '<svg width="13" height="13" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M9.5 1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5L9.5 1z" stroke="currentColor" stroke-width="1.4"/><path d="M9.5 1v3.5H13" stroke="currentColor" stroke-width="1.4"/></svg>';
+  var ICO_DL = '<svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 2v8m0 0 3-3m-3 3L5 7M3 13h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  var ICO_CHEV = '<svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m6 4 4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+
+  /* What each root is used for, derived from the names of its issuing CAs, so
+     the purpose is visible without expanding the hierarchy. */
+  var PURPOSE_RULES = [
+    [/\b(SSL|TLS)\b/i, 'TLS'],
+    [/\bCS\b|Code Sign/i, 'Code Signing'],
+    [/SMIME/i, 'S/MIME'],
+    [/Time ?Stamp|\bTSA\b/i, 'Time Stamping'],
+    [/Client Auth/i, 'Client Auth'],
+    [/Document Signing/i, 'Document Signing'],
+    [/Secure Signing/i, 'Secure Signing'],
+    [/\bIGTF\b/i, 'IGTF'],
+    [/\bDevice\b/i, 'Device'],
+    [/Class \d/i, 'Individual']
+  ];
+  /* A hierarchy can serve more than one trust program: the UAE QTSP issuing CAs
+     sit under emSign Root CA - C1 alongside the emSign ones. The group is still a
+     single record, so the root is never listed twice and never counted twice. */
+  function groupPrograms(g) { return g.programs || [g.program]; }
+  function subProgram(g, s) { return s.p || g.program; }
+  /* which issuing CAs of this group belong in the block currently being drawn */
+  function subsForProgram(g, p) {
+    if (state.program === 'all') return g.subs;
+    return g.subs.filter(function (s) { return subProgram(g, s) === p; });
+  }
+  function purposeTags(g, subs) {
+    var names = (subs || g.subs).map(function (s) { return s.n; }).join(' | ') + ' | ' + g.root.n;
+    var found = [];
+    PURPOSE_RULES.forEach(function (r) { if (r[0].test(names)) found.push(r[1]); });
+    if (!found.length) return '';
+    var shown = found.slice(0, 3);
+    var extra = found.length - shown.length;
+    return '<span class="rtags">' +
+      shown.map(function (t) { return '<span class="rtag">' + t + '</span>'; }).join('') +
+      (extra ? '<span class="rtag rtag-more">+' + extra + '</span>' : '') +
+      '</span>';
+  }
+
+  function esc(s) {
+    return String(s).replace(/[&<>"]/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+    });
+  }
+  function hl(text) {
+    var t = esc(text);
+    if (!state.q) return t;
+    var i = t.toLowerCase().indexOf(state.q.toLowerCase());
+    if (i < 0) return t;
+    return t.slice(0, i) + '<mark>' + t.slice(i, i + state.q.length) + '</mark>' + t.slice(i + state.q.length);
+  }
+  function chipHtml(p) {
+    return '<span class="chip"><span class="dot" style="background:' + PROGRAMS[p].color + '"></span>' + PROGRAMS[p].label + '</span>';
+  }
+  /* strip separators so a fingerprint pasted in any format still matches */
+  function normFp(s) { return s.toLowerCase().replace(/[^a-z0-9]/g, ''); }
+
+  function docMatches(d) {
+    if (state.program !== 'all' && d.program !== state.program) return false;
+    if (state.cat !== 'all' && d.cat !== state.cat) return false;
+    if (!state.q) return true;
+    var hay = (d.title + ' ' + d.version + ' ' + (d.oid || '') + ' ' +
+      PROGRAMS[d.program].label + ' ' + CATS[d.cat] + ' ' + d.pdf + ' ' +
+      d.older.map(function (o) { return o[0] + ' ' + o[2]; }).join(' ')).toLowerCase();
+    return hay.indexOf(state.q.toLowerCase()) >= 0;
+  }
+  function certEntryMatches(e) {
+    if (!state.q) return true;
+    var q = state.q.toLowerCase();
+    /* the annotation left the name field, so it is added back here on purpose:
+       searching "cross" still has to find the cross-certificates */
+    var hay = (e.n + ' ' + (e.f || '') + ' ' + (e.c || '') + ' ' + (e.r || '') +
+      (e.x ? ' cross-signed cross certificate' : '') +
+      (e.rv ? ' revoked' : '') +
+      (e.ok ? ' valid' : '')).toLowerCase();
+    if (hay.indexOf(q) >= 0) return true;
+    var nq = normFp(q);
+    return nq.length >= 4 && !!e.f && normFp(e.f).indexOf(nq) >= 0;
+  }
+  function tsuMatches(u) {
+    if (!state.q) return true;
+    return (u.n + ' ' + u.issuer + ' ' + u.from + ' ' + u.to).toLowerCase().indexOf(state.q.toLowerCase()) >= 0;
+  }
+
+  /* ---------- program chips ---------- */
+  function renderProgramBar() {
+    var bar = document.getElementById('programBar');
+    var html = '<button class="pbtn" data-p="all" aria-pressed="' + (state.program === 'all') + '" type="button">All programs</button>';
+    Object.keys(PROGRAMS).forEach(function (p) {
+      html += '<button class="pbtn" data-p="' + p + '" aria-pressed="' + (state.program === p) + '" type="button">' +
+        '<span class="dot" style="background:' + PROGRAMS[p].color + '"></span>' + PROGRAMS[p].label + '</button>';
+    });
+    bar.innerHTML = html;
+    bar.querySelectorAll('.pbtn').forEach(function (b) {
+      b.addEventListener('click', function () {
+        state.program = b.getAttribute('data-p');
+        syncHash();
+        renderProgramBar(); renderCatBar(); applyFilters();
+      });
+    });
+  }
+
+  /* ---------- category chips ---------- */
+  function renderCatBar() {
+    var bar = document.getElementById('catBar');
+    var html = '<button class="tbtn" data-c="all" aria-pressed="' + (state.cat === 'all') + '" type="button">All types</button>';
+    Object.keys(CATS).forEach(function (c) {
+      html += '<button class="tbtn" data-c="' + c + '" aria-pressed="' + (state.cat === c) + '" type="button">' + CATS[c] + '</button>';
+    });
+    bar.innerHTML = html;
+    bar.querySelectorAll('.tbtn').forEach(function (b) {
+      b.addEventListener('click', function () {
+        state.cat = b.getAttribute('data-c');
+        syncHash();
+        renderCatBar(); applyFilters();
+      });
+    });
+  }
+
+  /* ---------- documents ---------- */
+  function renderDocs() {
+    var grid = document.getElementById('docGrid');
+    var list = DOCS.filter(docMatches);
+    document.getElementById('docCount').textContent = list.length + ' of ' + DOCS.length + ' documents';
+    docShown = list.length;
+    grid.innerHTML = list.map(function (d) {
+      var older;
+      if (d.older.length) {
+        older = '<details class="history"><summary>Version history (' + d.older.length + ' archived)</summary><ul>' +
+          d.older.map(function (o) {
+            return '<li><a href="' + REPO + o[2] + '" target="_blank" rel="noopener">' + esc(o[0]) + '</a><span class="hd">Effective ' + esc(o[1]) + '</span></li>';
+          }).join('') + '</ul></details>';
+      } else {
+        older = '<div class="first-version">First published version</div>';
+      }
+      return '<article class="doc">' +
+        '<div class="doc-top">' + chipHtml(d.program) + '<span class="cat">' + CATS[d.cat] + '</span></div>' +
+        '<h3>' + hl(d.title) + '</h3>' +
+        '<div class="doc-meta">' +
+          (d.oid ? '<button type="button" class="oid mono" data-oid="' + esc(d.oid) + '" title="Copy OID to clipboard">OID ' + hl(d.oid) + '</button>' : '') +
+          (d.date === 'See document'
+            ? '<span>Refer to the document for the effective date</span>'
+            : '<span>Effective ' + esc(d.date) + '</span>') +
+        '</div>' +
+        '<div class="doc-actions">' +
+          (d.pdf.indexOf('.pdf') > 0
+            ? '<a class="btn btn-cta" href="' + d.pdf + '" target="_blank" rel="noopener">' + ICO_PDF + 'PDF ' + esc(d.version) + '</a>'
+            : '<a class="btn btn-cta" href="' + d.pdf + '" target="_blank" rel="noopener">View on Private Trust page</a>') +
+          (d.md ? '<a class="btn btn-ghost" href="' + d.md + '"' +
+            (d.mdref ? ' data-md-ref="' + esc(d.mdref) + '"' : '') +
+            ' target="_blank" rel="noopener">Markdown</a>' : '') +
+        '</div>' + older + '</article>';
+    }).join('');
+  }
+
+  /* ---------- certificates ---------- */
+  /* the root's own downloads live in the group header, so the table below it
+     lists only issuing CAs and nothing is stated twice */
+  function rootLinks(r) {
+    var out = '';
+    if (r.c) out += '<a class="dl" href="' + REPO + 'certs/' + r.c + '" title="Download root certificate">' + ICO_DL + 'Certificate</a>';
+    if (r.r) {
+      var href = r.r.indexOf('http') === 0 ? r.r : CRL_BASE + r.r;
+      out += '<a class="dl" href="' + href + '" title="Download root CRL">' + ICO_DL + 'CRL</a>';
+    }
+    return out;
+  }
+
+  function certRow(e, isRoot, pending) {
+    var testHtml = '';
+    if (e.t) {
+      /* tt[3] marks a revoked or expired endpoint; without it the row is the valid test site */
+      testHtml = e.t.map(function (tt) {
+        var label = tt[3] ? '<span class="st-' + tt[3].toLowerCase() + '">' + tt[3] + '</span>' : 'Valid';
+        return '<div class="test-links">' + label + (tt[0] ? ' ' + tt[0] : '') + ': ' +
+          '<a href="' + REPO + 'downloads/testcerts/' + tt[1] + '" title="Download test certificate">Certificate</a> &middot; ' +
+          '<a href="' + tt[2] + '" target="_blank" rel="noopener">' + tt[2].replace('https://', '') + '</a></div>';
+      }).join('');
+    }
+    var name = '<div>' + hl(e.n) + (isRoot ? ' <span class="badge-root">Root</span>' : '') +
+      (e.x ? ' <span class="badge-cross">Cross-signed</span>' : '') +
+      (e.rv ? ' <span class="badge-revoked">Revoked</span>' : '') +
+      (e.ok ? ' <span class="badge-valid">Valid</span>' : '') +
+      (pending ? ' <span class="badge-pending">Pending publication</span>' : '') +
+      testHtml +
+      '</div>';
+    var cert = e.c ? '<a class="dl" href="' + REPO + 'certs/' + e.c + '" title="Download certificate">' + ICO_DL + 'Download</a>' : '<span style="color:var(--muted)">-</span>';
+    var crlHref = e.r ? (e.r.indexOf('http') === 0 ? e.r : CRL_BASE + e.r) : null;
+    var crl = crlHref ? '<a class="dl" href="' + crlHref + '" title="Download CRL">' + ICO_DL + 'CRL</a>' : '<span style="color:var(--muted)">-</span>';
+    var fp = e.f
+      ? '<div class="fp-line"><span class="mono">' + hl(e.f) + '</span><button class="copy" type="button" data-fp="' + esc(e.f) + '" aria-label="Copy fingerprint for ' + esc(e.n) + '">Copy</button></div>'
+      : '<span style="color:var(--muted)">' + (pending ? 'Published on accreditation' : 'See certificate file') + '</span>';
+    return '<tr><td data-label=""' + (isRoot ? '' : ' class="subcell"') + '>' + name + '</td><td data-label="Certificate">' + cert + '</td><td data-label="CRL">' + crl + '</td><td class="fp" data-label="SHA-256 fingerprint">' + fp + '</td></tr>';
+  }
+
+  function renderCerts() {
+    var wrap = document.getElementById('certList');
+    var order = ['emsign', 'incommon', 'qtsp', 'tsa', 'private'];
+    var shownRoots = 0, totalRoots = CERTS.length, shownTsu = 0;
+    var html = '';
+    order.forEach(function (p) {
+      if (state.program !== 'all' && state.program !== p) return;
+      /* Under "all programs" a multi-program hierarchy is drawn once, under its
+         primary program, so no root can appear in two blocks at the same time. */
+      var groups = CERTS.filter(function (g) {
+        return state.program === 'all' ? g.program === p : groupPrograms(g).indexOf(p) >= 0;
+      }).filter(function (g) {
+        if (!state.q) return true;
+        return certEntryMatches(g.root) || subsForProgram(g, p).some(certEntryMatches);
+      });
+      if (!groups.length) return;
+      shownRoots += groups.length;
+      html += '<div class="prog-block" data-prog="' + p + '"><h3><span class="dot" style="background:' + PROGRAMS[p].color + '"></span>' + PROGRAMS[p].label + '</h3>';
+      groups.forEach(function (g) {
+        /* open when a search is active, or when the user opened it earlier */
+        var open = (state.q || openGroups[g.root.n]) ? ' open' : '';
+        var progSubs = subsForProgram(g, p);
+        var subs = state.q ? progSubs.filter(certEntryMatches) : progSubs;
+        if (state.q && certEntryMatches(g.root) && !subs.length) subs = progSubs;
+        html += '<div class="ca-group' + open + '" data-root="' + esc(g.root.n) + '">' +
+          '<div class="ca-head">' +
+          '<button class="ca-root" type="button" aria-expanded="' + (open ? 'true' : 'false') + '">' +
+            '<span class="tw" aria-hidden="true">' + ICO_CHEV + '</span>' +
+            '<span class="rname">' + hl(g.root.n) + '</span>' +
+            (g.pending ? '<span class="badge-pending">Pending publication</span>' : '') +
+            purposeTags(g, progSubs) +
+            '<span class="rcount">' + progSubs.length + ' issuing CA' + (progSubs.length > 1 ? 's' : '') + '</span>' +
+          '</button>' +
+          '<div class="ca-fpline">' +
+            (g.root.f
+              ? '<span class="fp-label">SHA-256</span>' +
+                '<span class="rfp mono">' + hl(g.root.f) + '</span>' +
+                '<button class="copy" type="button" data-fp="' + esc(g.root.f) + '" aria-label="Copy fingerprint for ' + esc(g.root.n) + '">Copy</button>'
+              : '') +
+            '<span class="root-actions">' + rootLinks(g.root) + '</span>' +
+          '</div>' +
+          '</div>' +
+          '<div class="ca-subs"><div class="ca-table-wrap"><table class="ca">' +
+          '<colgroup><col class="c-name"><col class="c-act"><col class="c-act"><col></colgroup>' +
+          '<thead><tr><th>Issuing CA</th><th>Certificate</th><th>Revocation</th><th>SHA-256 Fingerprint</th></tr></thead><tbody>' +
+          subs.map(function (s) { return certRow(s, false, g.pending); }).join('') +
+          '</tbody></table></div></div></div>';
+      });
+      html += '</div>';
+    });
+
+    /* Time Stamping Units table (from the Time Stamping Repository page) */
+    if (state.program === 'all' || state.program === 'tsa') {
+      var tsus = TSUS.filter(tsuMatches);
+      if (tsus.length) {
+        shownTsu = tsus.length;
+        html += '<div class="prog-block" id="tsu"><h3><span class="dot" style="background:' + PROGRAMS.tsa.color + '"></span>Time Stamping Units (TSU)</h3>' +
+          '<div class="ca-group open"><div class="ca-table-wrap"><table class="ca">' +
+          '<colgroup><col class="c-name"><col class="c-date"><col class="c-date"><col></colgroup>' +
+          '<thead><tr><th>Common Name</th><th>Valid From (UTC)</th><th>Valid To (UTC)</th><th>Issuer</th></tr></thead><tbody>' +
+          tsus.map(function (u) {
+            return '<tr><td data-label="">' + hl(u.n) + '</td><td data-label="Valid from (UTC)">' + esc(u.from) + '</td><td data-label="Valid to (UTC)">' + esc(u.to) + '</td><td class="issuer" data-label="Issuer">' + hl(u.issuer) + '</td></tr>';
+          }).join('') +
+          '</tbody></table></div></div></div>';
+      }
+    }
+
+    wrap.innerHTML = html;
+    document.getElementById('certCount').textContent = shownRoots + ' of ' + totalRoots + ' CA hierarchies';
+    certShown = shownRoots;
+    tsuShown = shownTsu;
+
+    wrap.querySelectorAll('.ca-root').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var grp = btn.closest('.ca-group');
+        var open = grp.classList.toggle('open');
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        var key = grp.getAttribute('data-root');
+        if (open) openGroups[key] = true; else delete openGroups[key];
+      });
+    });
+    wrap.querySelectorAll('.copy').forEach(function (btn) {
+      btn.addEventListener('click', function (ev) {
+        ev.stopPropagation();
+        var v = btn.getAttribute('data-fp');
+        if (navigator.clipboard) navigator.clipboard.writeText(v);
+        btn.textContent = 'Copied';
+        announce('Fingerprint copied to clipboard');
+        setTimeout(function () { btn.textContent = 'Copy'; }, 1400);
+      });
+    });
+  }
+
+  /* ---------- empty states ----------
+     One search box drives two sections, so a match in one usually means zero in
+     the other. Point the reader at the section that did match instead of just
+     saying "no results". */
+  function updateEmptyStates() {
+    var q = state.q;
+    var docEmpty = document.getElementById('docEmpty');
+    var certEmpty = document.getElementById('certEmpty');
+    var certTotal = certShown + tsuShown;
+
+    if (docShown) {
+      docEmpty.style.display = 'none';
+    } else {
+      docEmpty.style.display = 'block';
+      docEmpty.innerHTML = q
+        ? 'No documents match <b>' + esc(q) + '</b>.' +
+          (certTotal ? ' ' + certTotal + ' matching ' + (certTotal === 1 ? 'entry' : 'entries') +
+            ' in <a href="#certificates">CA Certificates</a> below.' : '')
+        : 'No documents match the current filters.';
+    }
+
+    if (certTotal) {
+      certEmpty.style.display = 'none';
+    } else {
+      certEmpty.style.display = 'block';
+      certEmpty.innerHTML = q
+        ? 'No certificate authorities match <b>' + esc(q) + '</b>.' +
+          (docShown ? ' ' + docShown + ' matching ' + (docShown === 1 ? 'document' : 'documents') +
+            ' in <a href="#documents">Policy and Legal Documents</a> above.' : '')
+        : 'No certificate authorities match the current filters.';
+    }
+  }
+
+  function resultSummary() {
+    var certTotal = certShown + tsuShown;
+    if (!state.q) return 'Filters cleared';
+    if (!docShown && !certTotal) return 'No results for ' + state.q;
+    var parts = [];
+    if (docShown) parts.push(docShown + ' document' + (docShown === 1 ? '' : 's'));
+    if (certTotal) parts.push(certTotal + ' certificate ' + (certTotal === 1 ? 'entry' : 'entries'));
+    return parts.join(' and ') + ' match ' + state.q;
+  }
+
+  /* single entry point so both sections and their empty states stay in sync */
+  function applyFilters() {
+    renderDocs();
+    renderCerts();
+    updateEmptyStates();
+  }
+
+  /* ---------- recent updates ----------
+     Derived from the document records so the panel can never fall out of step
+     with what is actually published. */
+  var MONTHS = { Jan: 0, Feb: 1, Mar: 2, Apr: 3, May: 4, Jun: 5, Jul: 6, Aug: 7, Sep: 8, Oct: 9, Nov: 10, Dec: 11 };
+  function parseDocDate(s) {
+    var m = /^(\d{1,2}) (\w{3}) (\d{4})$/.exec(s);
+    return m && MONTHS[m[2]] !== undefined ? new Date(+m[3], MONTHS[m[2]], +m[1]).getTime() : 0;
+  }
+  /* "Certification Practice Statement (CP/CPS) for SSL/TLS" -> "SSL/TLS" */
+  function docSubject(d) {
+    var m = /^Certification Practice Statement \((?:CP\/CPS|CPS)\) for (.+)$/.exec(d.title);
+    return (m ? m[1] : d.title).replace(' (Private Trust)', '');
+  }
+  function renderUpdates() {
+    var list = document.getElementById('updateList');
+    if (!list) return;
+    var byDate = {};
+    DOCS.forEach(function (d) {
+      if (parseDocDate(d.date)) (byDate[d.date] = byDate[d.date] || []).push(d);
+    });
+    var dates = Object.keys(byDate).sort(function (a, b) { return parseDocDate(b) - parseDocDate(a); }).slice(0, 3);
+    list.innerHTML = dates.map(function (dt) {
+      var docs = byDate[dt];
+      var programs = {}; docs.forEach(function (d) { programs[d.program] = 1; });
+      var onlyProgram = Object.keys(programs).length === 1;
+      var allCpCps = docs.every(function (d) { return d.cat === 'cpcps'; });
+      /* only call a batch a versioned "policy set" when every document in it
+         carries that version, otherwise the headline states a version most of
+         the batch does not have */
+      var oneVersion = docs.every(function (d) { return d.version === docs[0].version; });
+      var body;
+      if (docs.length >= 4 && onlyProgram) {
+        body = PROGRAMS[docs[0].program].label +
+          (oneVersion ? ' policy set ' + docs[0].version + ' published (' : ' documents published or updated (') +
+          docs.length + ' documents)';
+      } else if (allCpCps && !docs.some(function (d) { return /\bCPS\b/.test(docSubject(d)); })) {
+        /* say what kind of document changed; a subject that already carries
+           "CP/CPS" in its own name is left to speak for itself */
+        body = 'CP/CPS update' + (docs.length > 1 ? 's' : '') + ': ' +
+          docs.map(function (d) { return docSubject(d) + ' ' + d.version; }).join(', ');
+      } else {
+        body = docs.map(function (d) { return docSubject(d) + ' ' + d.version; }).join(', ');
+      }
+      return '<li><b>' + esc(dt) + '</b> - ' + esc(body) + '</li>';
+    }).join('');
+  }
+
+  /* ---------- stats ---------- */
+  var STAT_ICONS = {
+    doc: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>',
+    layers: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 2 7l10 5 10-5z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg>',
+    shield: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>',
+    key: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="7.5" cy="15.5" r="5.5"/><path d="m21 2-9.6 9.6"/><path d="m15.5 7.5 3 3L22 7l-3-3"/></svg>',
+    globe: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>'
+  };
+  function statHtml(icon, num, label) {
+    return '<div class="bstat"><span class="si">' + STAT_ICONS[icon] + '</span><span class="st"><b>' + num + '</b>' + label + '</span></div>';
+  }
+  /* every tile is counted from the data, so publishing a document or a CA
+     updates these figures without anyone editing them */
+  function renderStats() {
+    var versions = DOCS.reduce(function (a, d) { return a + 1 + d.older.length; }, 0);
+    var roots = CERTS.length;
+    var subs = CERTS.reduce(function (a, g) { return a + g.subs.length; }, 0);
+    var used = {};
+    DOCS.forEach(function (d) { used[d.program] = 1; });
+    CERTS.forEach(function (g) { used[g.program] = 1; });
+    document.getElementById('stats').innerHTML =
+      statHtml('doc', DOCS.length, 'Current documents') +
+      statHtml('layers', versions, 'Versions on file') +
+      statHtml('shield', roots, 'CA hierarchies') +
+      statHtml('key', subs, 'Issuing CAs') +
+      statHtml('globe', Object.keys(used).length, 'Trust programs');
+  }
+
+  /* ---------- search ---------- */
+  var qInput = document.getElementById('q');
+  if (state.q) qInput.value = state.q;
+  var qTimer = null;
+  var qHint = document.getElementById('qHint');
+
+  /* The first thing a search matched, so Enter can take you straight there. */
+  function firstMatchEl() {
+    var d = document.querySelector('#docGrid .doc mark');
+    if (d) return d.closest('.doc');
+    var c = document.querySelector('#certList mark');
+    if (c) return c.closest('tr') || c.closest('.ca-group');
+    /* fingerprint typed without separators produces no highlight, so fall back
+       to the first thing still on screen after filtering */
+    return document.querySelector('#certList .ca-group') || document.querySelector('#docGrid .doc');
+  }
+  function flash(el) {
+    var cls = el.tagName === 'TR' ? 'flash-row' : 'flash-el';
+    el.classList.remove(cls);
+    void el.offsetWidth;
+    el.classList.add(cls);
+    setTimeout(function () { el.classList.remove(cls); }, 2600);
+  }
+  function jumpToFirstMatch() {
+    if (!state.q) return;
+    var el = firstMatchEl();
+    if (!el) { announce('No results to jump to'); return; }
+    el.scrollIntoView({ block: 'center' });
+    flash(el);
+    var name = (el.querySelector('.rname, h3, td') || el).textContent.trim().split('\n')[0];
+    announce('Showing ' + name.slice(0, 60));
+  }
+  function updateHint() {
+    if (!qHint) return;
+    var has = state.q && (docShown || certShown || tsuShown);
+    qHint.textContent = has ? 'Enter' : '/';
+    qHint.title = has ? 'Jump to the first match' : 'Press / to search';
+    qHint.classList.toggle('is-jump', !!has);
+  }
+
+  qInput.addEventListener('input', function () {
+    clearTimeout(qTimer);
+    qTimer = setTimeout(function () {
+      state.q = qInput.value.trim();
+      syncHash();
+      applyFilters();
+      updateHint();
+      announce(resultSummary());
+    }, 120);
+  });
+  if (qHint) qHint.addEventListener('click', jumpToFirstMatch);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === '/' && document.activeElement !== qInput &&
+        !/INPUT|TEXTAREA|SELECT/.test(document.activeElement.tagName)) {
+      e.preventDefault();
+      qInput.focus();
+    }
+  });
+  qInput.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && qInput.value) {
+      qInput.value = '';
+      qInput.dispatchEvent(new Event('input'));
+      updateHint();
+    } else if (e.key === 'Enter') {
+      e.preventDefault();
+      /* apply immediately in case the debounce has not fired yet */
+      clearTimeout(qTimer);
+      state.q = qInput.value.trim();
+      syncHash();
+      applyFilters();
+      updateHint();
+      jumpToFirstMatch();
+    }
+  });
+
+  /* click-to-copy OID on document cards */
+  document.getElementById('docGrid').addEventListener('click', function (e) {
+    var b = e.target.closest('.oid');
+    if (!b) return;
+    if (navigator.clipboard) navigator.clipboard.writeText(b.getAttribute('data-oid'));
+    announce('OID copied to clipboard');
+    var old = b.textContent;
+    b.textContent = 'OID copied';
+    setTimeout(function () { b.textContent = old; }, 1200);
+  });
+
+  document.getElementById('expandAll').addEventListener('click', function () {
+    document.querySelectorAll('.ca-group[data-root]').forEach(function (g) {
+      g.classList.add('open');
+      var b = g.querySelector('.ca-root');
+      if (!b) return;
+      b.setAttribute('aria-expanded', 'true');
+      openGroups[g.getAttribute('data-root')] = true;
+    });
+    announce('All certificate authorities expanded');
+  });
+  document.getElementById('collapseAll').addEventListener('click', function () {
+    document.querySelectorAll('.ca-group[data-root]').forEach(function (g) {
+      g.classList.remove('open');
+      var b = g.querySelector('.ca-root');
+      if (!b) return;
+      b.setAttribute('aria-expanded', 'false');
+      delete openGroups[g.getAttribute('data-root')];
+    });
+    announce('All certificate authorities collapsed');
+  });
+
+  /* ---------- CA finder: typeahead over every root and issuing CA ---------- */
+  var CA_INDEX = [];
+  CERTS.forEach(function (g) {
+    CA_INDEX.push({ name: g.root.n, root: g.root.n, program: g.program, isRoot: true });
+    g.subs.forEach(function (s) {
+      CA_INDEX.push({ name: s.n, root: g.root.n, program: subProgram(g, s), isRoot: false, cross: !!s.x, revoked: !!s.rv, valid: !!s.ok });
+    });
+  });
+  var finder = document.getElementById('caFinder');
+  var finderList = document.getElementById('caFinderList');
+  var finderItems = [];
+  var finderActive = -1;
+
+  function closeFinder() {
+    finderList.hidden = true;
+    finder.setAttribute('aria-expanded', 'false');
+    finderActive = -1;
+  }
+  /* plain-language aliases so "code signing" finds the CS CAs, etc. */
+  var CA_ALIASES = [
+    ['code signing', 'cs ca'], ['codesigning', 'cs ca'],
+    ['s/mime', 'smime'], ['email', 'smime'],
+    ['time stamping', 'tsa'], ['timestamp', 'tsa'],
+    ['document signing', 'document signing'], ['client auth', 'client auth'],
+    ['ssl', 'ssl'], ['tls', 'tls'], ['ev ', 'ev '], ['qualified', 'qts']
+  ];
+  function finderMatches(e, q) {
+    var n = e.name.toLowerCase();
+    if (n.indexOf(q) >= 0) return true;
+    /* the cross-signed marker is not part of the name, so match it explicitly */
+    if (e.cross && 'cross-signed'.indexOf(q) === 0) return true;
+    if (e.revoked && 'revoked'.indexOf(q) === 0) return true;
+    if (e.valid && 'valid'.indexOf(q) === 0) return true;
+    for (var i = 0; i < CA_ALIASES.length; i++) {
+      if (q.indexOf(CA_ALIASES[i][0]) >= 0 && n.indexOf(CA_ALIASES[i][1]) >= 0) return true;
+    }
+    return false;
+  }
+  function renderFinder() {
+    var q = finder.value.trim().toLowerCase();
+    if (!q) { closeFinder(); return; }
+    finderItems = CA_INDEX.filter(function (e) { return finderMatches(e, q); }).slice(0, 12);
+    if (!finderItems.length) {
+      finderList.innerHTML = '<div class="finder-item" aria-disabled="true">No CA matches "' + esc(finder.value.trim()) + '"</div>';
+    } else {
+      finderList.innerHTML = finderItems.map(function (e, i) {
+        var path = e.isRoot
+          ? 'Root CA &middot; ' + PROGRAMS[e.program].label
+          : (e.cross ? 'Cross-signed by ' : 'Issued under ') + esc(e.root) + ' &middot; ' + PROGRAMS[e.program].label;
+        /* a cross-signed certificate shares its subject name with the self-signed
+           root, so the badge is what tells the two entries apart in this list */
+        return '<div class="finder-item" role="option" id="fi-' + i + '" data-i="' + i + '"><span>' + esc(e.name) +
+          (e.cross ? ' <span class="badge-cross">Cross-signed</span>' : '') +
+          (e.revoked ? ' <span class="badge-revoked">Revoked</span>' : '') +
+          (e.valid ? ' <span class="badge-valid">Valid</span>' : '') +
+          '</span><span class="fi-path">' + path + '</span></div>';
+      }).join('');
+    }
+    finderActive = -1;
+    finderList.hidden = false;
+    finder.setAttribute('aria-expanded', 'true');
+  }
+  function gotoCA(entry) {
+    closeFinder();
+    finder.value = entry.name;
+    /* clear filters that would hide the target */
+    var rerender = false;
+    if (state.program !== 'all' && state.program !== entry.program) { state.program = 'all'; rerender = true; }
+    if (state.q) { state.q = ''; qInput.value = ''; rerender = true; }
+    if (rerender) { syncHash(); renderProgramBar(); renderCatBar(); applyFilters(); }
+    var target = null;
+    document.querySelectorAll('.ca-group').forEach(function (g) {
+      var rn = g.querySelector('.rname');
+      if (!target && rn && rn.textContent === entry.root) target = g;
+    });
+    if (!target) return;
+    if (!target.classList.contains('open')) target.querySelector('.ca-root').click();
+    var row = null;
+    if (!entry.isRoot) {
+      target.querySelectorAll('tbody tr').forEach(function (tr) {
+        var td = tr.querySelector('td');
+        if (!row && td && td.textContent.indexOf(entry.name) === 0) row = tr;
+      });
+    }
+    /* Picking a root matches no row, since the table lists only issuing CAs.
+       Flash whatever we landed on, so a collapsed group that just opened still
+       confirms the jump instead of scrolling silently. Scroll to the group's
+       header rather than the group itself: a hierarchy that just expanded can be
+       taller than the viewport, and centring the whole thing would push the root
+       name and its fingerprint off the top of the screen. */
+    var el = row || target;
+    var scrollTo = row || target.querySelector('.ca-head') || target;
+    setTimeout(function () {
+      scrollTo.scrollIntoView({ block: 'center' });
+      flash(el);
+    }, 60);
+    announce(entry.name + ' shown in the hierarchy');
+  }
+  finder.addEventListener('input', renderFinder);
+  finder.addEventListener('keydown', function (e) {
+    if (finderList.hidden) return;
+    var opts = finderList.querySelectorAll('.finder-item[role=option]');
+    if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+      e.preventDefault();
+      if (!opts.length) return;
+      finderActive = e.key === 'ArrowDown'
+        ? (finderActive + 1) % opts.length
+        : (finderActive - 1 + opts.length) % opts.length;
+      opts.forEach(function (o, i) { o.classList.toggle('active', i === finderActive); });
+      opts[finderActive].scrollIntoView({ block: 'nearest' });
+      finder.setAttribute('aria-activedescendant', 'fi-' + finderActive);
+    } else if (e.key === 'Enter') {
+      e.preventDefault();
+      if (finderActive >= 0 && finderItems[finderActive]) gotoCA(finderItems[finderActive]);
+      else if (finderItems.length === 1) gotoCA(finderItems[0]);
+    } else if (e.key === 'Escape') {
+      closeFinder();
+    }
+  });
+  finderList.addEventListener('click', function (e) {
+    var item = e.target.closest('.finder-item[role=option]');
+    if (item) gotoCA(finderItems[parseInt(item.getAttribute('data-i'), 10)]);
+  });
+  document.addEventListener('click', function (e) {
+    if (!finderList.hidden && !e.target.closest('.ca-finder')) closeFinder();
+  });
+
+  /* ---------- back to top ---------- */
+  var toTop = document.getElementById('toTop');
+  window.addEventListener('scroll', function () {
+    toTop.classList.toggle('show', window.scrollY > 600);
+  }, { passive: true });
+  toTop.addEventListener('click', function () { window.scrollTo({ top: 0 }); });
+
+  renderProgramBar();
+  renderCatBar();
+  applyFilters();
+  renderStats();
+  renderUpdates();
+</script>
+</body>
+</html>

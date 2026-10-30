@@ -1,0 +1,9 @@
+Accept-Ranges: bytes
+ETag: W/"863-1793182950000"
+Last-Modified: Wed, 28 Oct 2026 10:22:30 GMT
+Content-Type: application/x-x509-ca-cert
+Content-Length: 863
+Date: Fri, 30 Oct 2026 07:11:11 GMT
+Connection: close
+
+url: https://repository.emsign.com/certs/EMOVCSCAG3B.crt

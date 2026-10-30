@@ -1,0 +1,9 @@
+Accept-Ranges: bytes
+ETag: W/"1473-1793182950000"
+Last-Modified: Wed, 28 Oct 2026 10:22:30 GMT
+Content-Type: application/x-x509-ca-cert
+Content-Length: 1473
+Date: Fri, 30 Oct 2026 07:10:00 GMT
+Connection: close
+
+url: https://repository.emsign.com/certs/crosssign/rootsmimecag1.crt
