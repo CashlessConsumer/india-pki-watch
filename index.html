@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>india-pki-watch — Tamper-evident archive of India's PKI trust anchors</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0a0e0a">
+<meta name="color-scheme" content="dark">
+<meta name="description" content="Dated snapshots of the root certificates and CA-published artifacts that anchor India's certificate authority ecosystem — so silent re-issue is detectable by diff.">
+<style>
+  :root { --bg:#0a0e0a; --fg:#d8e0d8; --dim:#8a968a; --acc:#4ec9a4; --warn:#e0b45c; --card:#111711; --line:#1e2a1e; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.65 ui-sans-serif,system-ui,"Segoe UI",Roboto,sans-serif; }
+  main { max-width:880px; margin:0 auto; padding:3rem 1.25rem 5rem; }
+  h1 { font-size:1.9rem; line-height:1.2; margin:0 0 .3rem; }
+  h1 .brand { color:var(--acc); }
+  .tagline { color:var(--dim); margin:0 0 2.5rem; }
+  h2 { font-size:1.15rem; color:var(--acc); margin:2.5rem 0 .6rem; text-transform:uppercase; letter-spacing:.06em; }
+  code, pre { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.86em; background:var(--card); border:1px solid var(--line); border-radius:6px; }
+  code { padding:.1em .4em; }
+  pre { padding:1rem; overflow-x:auto; line-height:1.5; }
+  table { border-collapse:collapse; width:100%; margin:1rem 0; font-size:.92rem; }
+  th, td { text-align:left; padding:.55rem .7rem; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { color:var(--dim); font-weight:600; }
+  td.hash { font-family:ui-monospace,monospace; font-size:.78rem; word-break:break-all; color:var(--acc); }
+  a { color:var(--acc); text-decoration:none; } a:hover { text-decoration:underline; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:1.1rem 1.25rem; margin:1rem 0; }
+  .warn { border-left:3px solid var(--warn); }
+  .finding { border-left:3px solid var(--acc); }
+  .muted { color:var(--dim); }
+  ul { padding-left:1.3rem; } li { margin:.3rem 0; }
+  footer { margin-top:4rem; padding-top:1.5rem; border-top:1px solid var(--line); color:var(--dim); font-size:.85rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>india<span class="brand">-pki-watch</span></h1>
+  <p class="tagline">Tamper-evident snapshots of India's PKI trust anchors and the CA-published artifacts behind them. If a certificate is silently re-issued, this archive makes it detectable by diff.</p>
+
+  <h2>Why this exists</h2>
+  <p>Every TLS connection to a <code>*.gov.in</code> site, every bank on the <code>.bank.in</code> zone, and every document-signing chain in India terminates — eventually — at a small set of certificate authorities licensed by the Controller of Certifying Authorities (CCA). In October 2026 the eMudhra/emSign chain compromise made those anchors first-class evidence. When a CA fixes a problem, it rarely announces it: roots get re-issued, files get replaced, Last-Modified headers quietly move. There is no public, timestamped record of what each CA served and when.</p>
+  <p>This repo is that record. Each snapshot is a dated directory of certificate files <em>as served</em> — bytes, HTTP headers, the page that linked them, and a <code>SHA256SUMS.txt</code> manifest — committed to git so the history of every re-fetch is externally verifiable.</p>
+
+  <h2>Sources</h2>
+  <table>
+    <tr><th>Source</th><th>What</th><th>Snapshot</th></tr>
+    <tr><td><code>cca-gov-in/</code></td><td>CCA India root certificates page — the national root (<code>CCA India 2022</code>, <code>CCA India 2022 SPL</code>)</td><td>2026-10-30 (2 certs)</td></tr>
+    <tr><td><code>emsign-repository/</code></td><td>Full corpus of the eMudhra/emSign public repository — every cert the CA publishes, with its own fingerprints as cross-check</td><td>2026-10-30 (116 certs)</td></tr>
+    <tr><td><code>idrbt-ca/</code></td><td>IDRBT CA — <strong>unreachable</strong> (see findings)</td><td>status note only</td></tr>
+    <tr><td><code>nic-ca/</code></td><td>NIC CA — candidate; no public endpoint located yet</td><td>—</td></tr>
+  </table>
+
+  <h2>Baseline fingerprints</h2>
+  <table>
+    <tr><th>Certificate</th><th>SHA-256 (file as served)</th></tr>
+    <tr><td>CCA India 2022<br><span class="muted">serial 762433EB…, RSA-4096, valid 2022→2042</span></td><td class="hash">2427c86a7f7e7bbe1684b75cfe96537ab080d00b7d6acf0c4453b438f246e0ee</td></tr>
+    <tr><td>CCA India 2022 SPL<br><span class="muted">serial 628281C6…, RSA-4096, valid 2022→2042</span></td><td class="hash">6e92017ece0e2e752a59b37c0ebf0fb958311cc585deda1fdf12790eb99b3caf</td></tr>
+    <tr><td>emSign ECC Root CA - G3<br><span class="muted">the compromised-chain root; matches eMudhra's published fingerprint</span></td><td class="hash">86a1ecba089c4a8d3bbe2734c612ba341d813e043cf9e8a862cd5c57a36bbe6b</td></tr>
+  </table>
+  <p class="muted">All 116 emSign-corpus certs verified against the SHA-256 fingerprints eMudhra itself publishes; CCA files captured with <code>Last-Modified: 17 Sep 2025 12:06:51 GMT</code> at fetch time.</p>
+
+  <h2>Findings already on record</h2>
+  <div class="card warn">
+    <strong>CCA India 2022 SPL ships a broken PEM.</strong> The file as served has a stray blank line before the <code>END CERTIFICATE</code> marker, so <code>openssl x509 -in CCAIndia2022SPL.cer</code> refuses to parse it. The embedded DER is intact. A national root CA distributing a root its own validators can't parse is its own hygiene finding — and exactly the kind of artifact detail Certificate Transparency can never capture.
+  </div>
+  <div class="card warn">
+    <strong>idrbtca.org.in is dead in practice.</strong> The apex times out even from an Indian vantage point, the CRL endpoint returns 403, and the <code>praman</code> portal 404s. Meanwhile the entire <code>.bank.in</code> zone we swept (25 hosts) is served by an eMudhra intermediate (<code>EM DV TLS CA - G2A-1</code>), 8 more by emSign — consistent with the documented IDRBT→eMudhra procurement trail. India's banking-PK heritage CA is effectively off the air.
+  </div>
+  <div class="card finding">
+    <strong>Provenance closure achieved.</strong> The intermediate captured in the wild from <code>.bank.in</code> TLS handshakes is byte-identical to the repository copy; the TrustCheck app's bundled G3 fixture decodes to the same root archived here. One chain of custody, three independent capture paths.
+  </div>
+
+  <h2>How to verify</h2>
+  <pre>git clone https://github.com/LogicIncZo/india-pki-watch.git
+cd india-pki-watch
+sha256sum -c cca-gov-in/2026-10-30-root-certs/SHA256SUMS.txt   # needs cwd fix; see script
+bash scripts/check_ccaindia.sh     # re-fetches live certs, diffs vs latest snapshot
+bash scripts/check_emsignrepo.sh   # re-fetches all 116, checks vs published fingerprints</pre>
+  <p>Mismatch = a re-issue event. <code>git log</code> the snapshot dirs for the last-known-good bytes and diff. A weekly checker runs against this repo and opens an alert on any change — snapshots are only ever added, never edited.</p>
+
+  <h2>What we deliberately don't collect</h2>
+  <ul>
+    <li><strong>TLS leaf certificates</strong> — Certificate Transparency logs already archive every publicly-trusted cert with third-party timestamping; duplicating crt.sh adds nothing.</li>
+    <li><strong>Browser/OS trust-store mirrors</strong> — Mozilla publishes their list; we track deltas relevant to India, not blobs.</li>
+    <li><strong>Private keys or anything containing personal data</strong> — certificates are public objects; documents are not.</li>
+  </ul>
+
+  <h2>Context</h2>
+  <p>This archive backs <a href="https://cyber.cashlessconsumer.in/pages/emudhra.html">CashlessConsumer's eMudhra investigation</a> and the <a href="https://cyber.cashlessconsumer.in/">cyber desk</a> generally. The related app <strong>TrustCheck</strong> lets any Android user test whether <em>their phone</em> still trusts the compromised chains. Reach: <a href="https://github.com/LogicIncZo/india-pki-watch">github.com/LogicIncZo/india-pki-watch</a>.</p>
+
+  <footer>CashlessConsumer · CyberOpsec desk · snapshots begun 2026-10-30 · certs are public objects; verify, don't trust.</footer>
+</main>
+</body>
+</html>
