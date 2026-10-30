@@ -3,7 +3,7 @@
 Tamper-evident archive of India PKI trust anchors and the CAs that serve them.
 Every fetch is snapshotted with HTTP headers + SHA256SUMS, never edited after
 the fact. A re-issue that changes bytes under the same name shows up as a diff
-against git history. Desk: CyberOpsec. Repo: LogicIncZo/india-pki-watch.
+against git history. Desk: CyberOpsec. Repo: CashlessConsumer/india-pki-watch.
 
 ## Sources
 

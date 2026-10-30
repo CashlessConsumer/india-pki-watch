@@ -1,6 +1,6 @@
 # [REVIEW] emSign/eMudhra public repository — full corpus snapshot
 
-2026-10-30. Repo: `LogicIncZo/india-pki-watch`, dir
+2026-10-30. Repo: `CashlessConsumer/india-pki-watch`, dir
 `emsign-repository/2026-10-30-full-corpus/`.
 
 ## What
