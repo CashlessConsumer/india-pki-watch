@@ -46,7 +46,7 @@ files after 2026-10-30 without a public notice, diff against SHA256SUMS.txt here
 ## Version control (2026-10-30)
 
 This verification is its own git repo (local: `CyberOpsec/artifacts/cca-gov-in/`,
-remote: `LogicIncZo/cca-root-watch` on GitHub — public, so the snapshot is
+remote: `CashlessConsumer/india-pki-watch` on GitHub — public, so the snapshot is
 externally timestamped). Tamper-evidence chain: per-file sha256 in
 `2026-10-30-root-certs/SHA256SUMS.txt` → initial commit hash → dated history
 for every future re-fetch. To check for silent re-issue: run
