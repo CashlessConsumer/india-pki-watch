@@ -1,0 +1,657 @@
+[
+ {
+  "name": "emSign Root CA - G1",
+  "file": "emSignRootCAG1.crt",
+  "sha256_fingerprint": "40f6af0346a99aa1cd1d555a4e9cce62c7f9634603ee406615833dc8c8d00367"
+ },
+ {
+  "name": "emSign SSL CA - G1",
+  "file": "emSignSSLCAG1.crt",
+  "sha256_fingerprint": "47b2efbc3670e7db4b41f22c51fc02ee84fb2dbf3082a49f2c2688122e9210a1"
+ },
+ {
+  "name": "emSign EV SSL CA - G1",
+  "file": "emSignEVSSLCAG1.crt",
+  "sha256_fingerprint": "4334eeb2cc114f82bee6f8a7e5aea03a42eb2e1f70cbd66102e414d72f0033b9"
+ },
+ {
+  "name": "emSign Class 1 CA - G1",
+  "file": "emSignClass1CAG1.crt",
+  "sha256_fingerprint": "cf6d0333d0be2c69a42d453960dee9e109d9e8843ea3061a1671d6eaf85eb7d8"
+ },
+ {
+  "name": "emSign Class 2 CA - G1",
+  "file": "emSignClass2CAG1.crt",
+  "sha256_fingerprint": "63a8369dc824a42bc7ae6ee5d26aafd32df4af677ca18b941b7a57e33b1e3559"
+ },
+ {
+  "name": "emSign Class 3 CA - G1",
+  "file": "emSignClass3CAG1.crt",
+  "sha256_fingerprint": "42da1c562f80e46da7a321244efc23d0faa9febbb7aa0377d96b42d9e88ab200"
+ },
+ {
+  "name": "emSign Device CA - G1",
+  "file": "emSignDeviceCAG1.crt",
+  "sha256_fingerprint": "4c9198b673550858799ad2744cc083c1ba0027e77d3b8fd6d56cf53620d099e2"
+ },
+ {
+  "name": "emSign SMIME CA - G1",
+  "file": "emSignSMIMECAG1.crt",
+  "sha256_fingerprint": "ba9e8a1fcc4154b094be734035eca7e54e9f5619d511b265750eeb982e2c6d06"
+ },
+ {
+  "name": "emSign Root Client Auth CA - G1",
+  "file": "crosssign/rootclientauthcag1.crt",
+  "sha256_fingerprint": "6fb75190477405c28afffe25338a92f4973956ed5b1a2353b24b6204e04d4cf9"
+ },
+ {
+  "name": "emSign Root SMIME CA - G1",
+  "file": "crosssign/rootsmimecag1.crt",
+  "sha256_fingerprint": "a65160e9770d70d8ace8ec3670a7b4ef1f87f4f507b1ce3d6fc623aded0694c1"
+ },
+ {
+  "name": "emSign Root TLS CA - G1",
+  "file": "crosssign/roottlscag1.crt",
+  "sha256_fingerprint": "9b913476eab476e21e0887dbcde44345d1359d28116b83b7cd3e87bd807ebf68"
+ },
+ {
+  "name": "emSign Root CA - G2",
+  "file": "emSignRootCAG2.crt",
+  "sha256_fingerprint": "1aa0c2709e831bd6e3b5129a00ba41f7eeef020872f1e6504bf0f6c3f24f3af3"
+ },
+ {
+  "name": "emSign CS CA - G2",
+  "file": "emSignCSCAG2.crt",
+  "sha256_fingerprint": "c2e4d1765005d5ca361d400a434b43036dbc931ec6d7b99c17bec030cc74ca7d"
+ },
+ {
+  "name": "emSign EV CS CA - G2",
+  "file": "emSignEVCSCAG2.crt",
+  "sha256_fingerprint": "69e2448c5f03eede5ec2c907efe96c3d33ad679b49cd29c38c5182323121beff"
+ },
+ {
+  "name": "emSign Time Stamping CA - G2",
+  "file": "emSignTSACAG2.crt",
+  "sha256_fingerprint": "c3be06c6b0a92334423180e95ea1e683aab9c3b7d0f5cb8a4f51fbc1006f3dc0"
+ },
+ {
+  "name": "emSign Root CS CA - G2",
+  "file": "crosssign/rootcscag2.crt",
+  "sha256_fingerprint": "a455eb8d8dc03cc7189b6a9438300d66373eb3225252ced2b12a6d25f0f940e0"
+ },
+ {
+  "name": "emSign Root TSA CA - G2",
+  "file": "crosssign/roottsacag2.crt",
+  "sha256_fingerprint": "2c15c5e31f6c837dc26d90568b10de51d849e56e90ed25312507d2e108c31239"
+ },
+ {
+  "name": "emSign ECC Root CA - G3",
+  "file": "emSignECCRootCAG3.crt",
+  "sha256_fingerprint": "86a1ecba089c4a8d3bbe2734c612ba341d813e043cf9e8a862cd5c57a36bbe6b"
+ },
+ {
+  "name": "emSign ECC SSL CA - G3",
+  "file": "emSignECCSSLCAG3.crt",
+  "sha256_fingerprint": "6b51d1dcf4eb7aee424185cb1b9580574b39cb963863de3ec1ad31ddb076ce9f"
+ },
+ {
+  "name": "emSign ECC EV SSL CA - G3",
+  "file": "emSignECCEVSSLCAG3.crt",
+  "sha256_fingerprint": "0116f17f97cdef4ade2e63cf2c1b064fd99f404d2b914100bc241f0781853323"
+ },
+ {
+  "name": "emSign ECC CS CA - G3",
+  "file": "emSignECCCSCAG3.crt",
+  "sha256_fingerprint": "0d6869a2b4f5df77a6afb034225e9bef345743cf306edf36ee35b9d05afad89c"
+ },
+ {
+  "name": "emSign ECC EV CS CA - G3",
+  "file": "emSignECCEVCSCAG3.crt",
+  "sha256_fingerprint": "0bada979b71402fe860696032cf40e9d2a3f41ccb5d03be33fbb94a80d7ffc7c"
+ },
+ {
+  "name": "emSign ECC Class 1 CA - G3",
+  "file": "emSignECCClass1CAG3.crt",
+  "sha256_fingerprint": "aba6a65dce8955baf0685ab88809b7699c174496ef9ee991533251494f43ce10"
+ },
+ {
+  "name": "emSign ECC Class 2 CA - G3",
+  "file": "emSignECCClass2CAG3.crt",
+  "sha256_fingerprint": "4e9b731567177e1776a96d66d9120b3deb28b800937ea4662565b3ef5ec8000b"
+ },
+ {
+  "name": "emSign ECC Class 3 CA - G3",
+  "file": "emSignECCClass3CAG3.crt",
+  "sha256_fingerprint": "7066a0f42f530e0db5afee72a3b04de614e7d2305c67d12c756bb215e37cb975"
+ },
+ {
+  "name": "emSign ECC Time stamping CA - G3",
+  "file": "emSignECCTSACAG3.crt",
+  "sha256_fingerprint": "c422ab86c1729e889fbcaf5cd73f217e03c29fe2ac50212f451307d915869f47"
+ },
+ {
+  "name": "emSign ECC Device CA - G3",
+  "file": "emSignECCDeviceCAG3.crt",
+  "sha256_fingerprint": "70b9ba595412cf8614b76747fd683cca2759f42642164834fbefdd88505c4f1c"
+ },
+ {
+  "name": "emSign ECC SMIME CA - G3",
+  "file": "emSignECCSMIMECAG3.crt",
+  "sha256_fingerprint": "f5b3e914cde2954f65464fa8e9d69f0492622b3c2ac243987b11cbbf1b451307"
+ },
+ {
+  "name": "emSign Root CS CA - G3",
+  "file": "crosssign/rootcscag3.crt",
+  "sha256_fingerprint": "7137fa71ad46ba686f746d1014ac57e8e6c6e9af4aa2f73c0c44a5cf27debb59"
+ },
+ {
+  "name": "emSign Root TSA CA - G3",
+  "file": "crosssign/roottsacag3.crt",
+  "sha256_fingerprint": "873be6f9ef3057221928e840686e2d18211a2680ae07051148c11a29d41ba98f"
+ },
+ {
+  "name": "emSign Root Client Auth CA - G3",
+  "file": "crosssign/rootclientauthcag3.crt",
+  "sha256_fingerprint": "63088538028e233c61b54c5a4238b7c753c04f32362f1c95a428d28e9cb6b15e"
+ },
+ {
+  "name": "emSign Root SMIME CA - G3",
+  "file": "crosssign/rootsmimecag3.crt",
+  "sha256_fingerprint": "b4ceeba48ef8ccc6090f6d2a62a85dbb51c5a106a7dc7ec5408270020f91c222"
+ },
+ {
+  "name": "emSign Root TLS CA - G3",
+  "file": "crosssign/roottlscag3.crt",
+  "sha256_fingerprint": "3094025792039a68af6e553686410bdab7c0d4a36b9084cba64202e35d6ebbdd"
+ },
+ {
+  "name": "emSign Root CA - C1",
+  "file": "emSignRootCAC1.crt",
+  "sha256_fingerprint": "125609aa301da0a249b97a8239cb6a34216f44dcac9f3954b14292f2e8c8608f"
+ },
+ {
+  "name": "emSign SSL CA - C1",
+  "file": "emSignSSLCAC1.crt",
+  "sha256_fingerprint": "f91aaca0e4e533747a0880bfcf6f26720dc1d05494c3938da6802290d5a09b32"
+ },
+ {
+  "name": "emSign EV SSL CA - C1",
+  "file": "emSignEVSSLCAC1.crt",
+  "sha256_fingerprint": "f6f159286a1401de5397e21a0090534a85f5e7b9f98fd4a5a47b1dffd4bfded4"
+ },
+ {
+  "name": "emSign Class 1 CA - C1",
+  "file": "emSignClass1CAC1.crt",
+  "sha256_fingerprint": "0ef7b863faabc384a694ff632daaf9bd31ced23e9246559a59ecd7472754cce6"
+ },
+ {
+  "name": "emSign Class 2 CA - C1",
+  "file": "emSignClass2CAC1.crt",
+  "sha256_fingerprint": "05b30b3fc44f8575334bd812ef9fa8a52a75743e19bc35a5be3912eca62c4669"
+ },
+ {
+  "name": "emSign Class 3 CA - C1",
+  "file": "emSignClass3CAC1.crt",
+  "sha256_fingerprint": "69b0dd09b98f36a9cc7bd7ffe8a00dcd319a5fc947c9c8af72c92894d8e81092"
+ },
+ {
+  "name": "emSign Device CA - C1",
+  "file": "emSignDeviceCAC1.crt",
+  "sha256_fingerprint": "d034b18751bee10aaaf94c2f14350d3f654e5b934d0dda592b31e58187a48952"
+ },
+ {
+  "name": "emSign Time Stamping CA - C1",
+  "file": "emsigntsac1.crt",
+  "sha256_fingerprint": "4d15e5199d88eab1838e06eba08bc690e971b4b1fcd77a6530e9c06f17fdf477"
+ },
+ {
+  "name": "Soft-Net Secure Signing CA - C1",
+  "file": "softnetsecuresignc1.crt",
+  "sha256_fingerprint": "ccec157da0f0bd58e3e8b584054fe0c44f04b4dd8c97b75b788d9140b05142f7"
+ },
+ {
+  "name": "UAE QTSP Qualified eSignature CA (NP)",
+  "file": "UAE-QTSP-Qualified-eSignature-CA-NP.crt",
+  "sha256_fingerprint": "8c5710bf1601919795673e9ff97f9c19acc7fa478e9e99cb6cf5b612a96c697b"
+ },
+ {
+  "name": "UAE QTSP Qualified eSignature CA NP-QSCD",
+  "file": "UAE-QTSP-Qualified-eSignature-CA-NP-QSCD.crt",
+  "sha256_fingerprint": "db9f48a53106a06a00472ff182914502fe5c816bbc4bb5468332396919bee571"
+ },
+ {
+  "name": "UAE QTSP Qualified eSeal CA LP",
+  "file": "UAE-QTSP-Qualified-eSeal-CA-LP.crt",
+  "sha256_fingerprint": "e3473aecef108b1ee6f49e177b25023605a0c041b1d97a9f59cffc00d22e0251"
+ },
+ {
+  "name": "UAE QTSP Qualified eSeal CA LP-QSCD",
+  "file": "UAE-QTSP-Qualified-eSeal-CA-LP-QSCD.crt",
+  "sha256_fingerprint": "6b1ea2dee0f34a7e53d64ebbf39c583daf9418d83a5aa9e6258e4f2be707b36e"
+ },
+ {
+  "name": "UAE QTSP Advanced CA",
+  "file": "UAE-QTSP-Advanced-CA.crt",
+  "sha256_fingerprint": "029f54fddc7ec492747037a524e9d6a13c80236d53487e75c4edcc191efe70bb"
+ },
+ {
+  "name": "UAE QTSP Device and Management CA",
+  "file": "UAE-QTSP-Device-and-Management-CA.crt",
+  "sha256_fingerprint": "d9656f4e4d83f62783d9ade60104eed90d9cc50c29a6ef0a78367751d2f8c748"
+ },
+ {
+  "name": "UAE QTSP TSA Issuing CA",
+  "file": "UAE-QTSP-TSA-Issuing-CA.crt",
+  "sha256_fingerprint": "407418904f71b2a0b2e35f45ad88c31125b1c52131d4f72fa821f83a471dc840"
+ },
+ {
+  "name": "UAE QTSP Validation Service CA",
+  "file": "UAE-QTSP-Validation-Service-CA.crt",
+  "sha256_fingerprint": "3213ce37224c4e954daaaeedda098eb708911d0548fd3e30ed8ffc1841bd5d65"
+ },
+ {
+  "name": "emSign Root CA - C2",
+  "file": "emSignRootCAC2.crt",
+  "sha256_fingerprint": "46cd083b47e80402028df493960ea19c85fe851950d5165f1c7da4faa951e2f8"
+ },
+ {
+  "name": "emSign CS CA - C2",
+  "file": "emSignCSCAC2.crt",
+  "sha256_fingerprint": "b0e6bb9d6e7a94bc4a6b89d96743438d2c565dbb0a697abb21457aca22a13ce4"
+ },
+ {
+  "name": "emSign EV CS CA - C2",
+  "file": "emSignEVCSCAC2.crt",
+  "sha256_fingerprint": "024998101210644f68fae9115543a5e6d26a6db0d2c10366ff2d5bb505d8872d"
+ },
+ {
+  "name": "emSign Time Stamping CA - C2",
+  "file": "emSignTSACAC2.crt",
+  "sha256_fingerprint": "571fc70654ab8c1aa3b4a261a3d505fae10bc4558fa17c72849b6b98bc845cae"
+ },
+ {
+  "name": "emSign ECC Root CA - C3",
+  "file": "emSignECCRootCAC3.crt",
+  "sha256_fingerprint": "bc4d809b15189d78db3e1d8cf4f9726a795da1643ca5f1358e1ddb0edc0d7eb3"
+ },
+ {
+  "name": "emSign ECC SSL CA - C3",
+  "file": "emSignECCSSLCAC3.crt",
+  "sha256_fingerprint": "a061d445399714c38fc101a6e9afbdb381f112fa5de7d5bc14904558d1ed3276"
+ },
+ {
+  "name": "emSign ECC EV SSL CA - C3",
+  "file": "emSignECCEVSSLCAC3.crt",
+  "sha256_fingerprint": "c0a578f2109e6f42d3d939948deeab729b20f7b23b4237abd8494df554cf985c"
+ },
+ {
+  "name": "emSign ECC CS CA - C3",
+  "file": "emSignECCCSCAC3.crt",
+  "sha256_fingerprint": "a3afd72375c1d7a8330e62d577e13581b72332c8062dfa9cf39e51ae65088582"
+ },
+ {
+  "name": "emSign ECC EV CS CA - C3",
+  "file": "emSignECCEVCSCAC3.crt",
+  "sha256_fingerprint": "cb210979924020970337ae32da5c3f981a9e05714ec22bb1c3421fe695e5157a"
+ },
+ {
+  "name": "emSign ECC Class 1 CA - C3",
+  "file": "emSignECCClass1CAC3.crt",
+  "sha256_fingerprint": "fad2e98649f1c606150f55269ebc035aea22ffac131de64ba6900c75d8447b7e"
+ },
+ {
+  "name": "emSign ECC Class 2 CA - C3",
+  "file": "emSignECCClass2CAC3.crt",
+  "sha256_fingerprint": "db4591f878f6672f5b70733a66ad7c9537b97e6f0af5ca49aab8ecb2ce02f86b"
+ },
+ {
+  "name": "emSign ECC Class 3 CA - C3",
+  "file": "emSignECCClass3CAC3.crt",
+  "sha256_fingerprint": "5a9a03f2d3fe589be63cda11820a9f25f074c92034f51c047d34226d252ec025"
+ },
+ {
+  "name": "emSign ECC Time stamping CA - C3",
+  "file": "emSignECCTSACAC3.crt",
+  "sha256_fingerprint": "71d2ee4dda251d9244f7ce7c6d478ec552d424ef719f02b71030f2821b6bc853"
+ },
+ {
+  "name": "emSign ECC Device CA - C3",
+  "file": "emSignECCDeviceCAC3.crt",
+  "sha256_fingerprint": "3d4511d0a80aa949a6d99b253a173471797c4459187a6329e736c37cb5493e46"
+ },
+ {
+  "name": "emSign Root Client Auth G1",
+  "file": "rootclientauthcag1.crt",
+  "sha256_fingerprint": "8abfc40faeaf13cbc8bb67b61c8d097a321cd2fee047c54256927e0f8bfeadfd"
+ },
+ {
+  "name": "emSign Client Auth CA - G1",
+  "file": "emSignClientAuthCAG1.crt",
+  "sha256_fingerprint": "a2f8ea7537cd5af80d048497a432de5907aee52785d07061462fc511467be720"
+ },
+ {
+  "name": "emSign Root Client Auth G3",
+  "file": "rootclientauthcag3.crt",
+  "sha256_fingerprint": "bbd8b3d745efb79198d93b9c482b9d934537325729ea2f02c129261f91be2e3d"
+ },
+ {
+  "name": "emSign Client Auth CA - G3",
+  "file": "emSignClientAuthCAG3.crt",
+  "sha256_fingerprint": "2997c32befc8dfbfc15981154443e63d5c06620ad408ee41082ba0669c064cfa"
+ },
+ {
+  "name": "emSign Root CS CA - G2",
+  "file": "rootcscag2.crt",
+  "sha256_fingerprint": "0d74ef67c88de3560365e225aef976f915e901347b73352d81ab5b4132bb2150"
+ },
+ {
+  "name": "emSign CS CA - G2",
+  "file": "emSignCSCRCAG2.crt",
+  "sha256_fingerprint": "c58e88b283f4c11b08fdbef396c6242f50c51f4e2190f40751fd6983e9efa8e2"
+ },
+ {
+  "name": "EM OV CS CA - G2A-1",
+  "file": "EMOVCSCAG2A1.crt",
+  "sha256_fingerprint": "6ce3e43327fd6694707c1b87346e26f0bbdae808744d39821be530fe90c1d310"
+ },
+ {
+  "name": "EM OV CS CA - G2B",
+  "file": "EMOVCSCAG2B.crt",
+  "sha256_fingerprint": "913f1a04b02814b604ac5275acb201b1c802b2c0f1b4986fb1a1eb595958e072"
+ },
+ {
+  "name": "EM OV CS CA - G2C",
+  "file": "EMOVCSCAG2C.crt",
+  "sha256_fingerprint": "ebac91b8ec9853323779edb393c595fadb29dd4ddb20c47e336f2a021684f27b"
+ },
+ {
+  "name": "emSign Root CS CA - G3",
+  "file": "rootcscag3.crt",
+  "sha256_fingerprint": "f2edaaff3d9b701fb4d14c9f285f8c0bad90fc3bcc1fa07d47f4718edaba34a5"
+ },
+ {
+  "name": "emSign CS CA - G3",
+  "file": "emSignCSCAG3.crt",
+  "sha256_fingerprint": "945caa768ef29ef4e89ec7ea1e9bf0aedc1ff8f89b9af8d1c76e70ffcd4e18ae"
+ },
+ {
+  "name": "EM OV CS CA - G3A-1",
+  "file": "EMOVCSCAG3A1.crt",
+  "sha256_fingerprint": "f3e525e51e2bb27cab003d874566b0b7762b7eac5bebc8cddfdff8b26ad430c3"
+ },
+ {
+  "name": "EM OV CS CA - G3B",
+  "file": "EMOVCSCAG3B.crt",
+  "sha256_fingerprint": "9e39de2881273acc225a149c72ba3e0f51424963669ab633ee1dc7df5db067b4"
+ },
+ {
+  "name": "EM OV CS CA - G3C",
+  "file": "EMOVCSCAG3C.crt",
+  "sha256_fingerprint": "4b2460a466f95fd40113bcdcca2ceb29b3b093921de45474da7df48874c630b1"
+ },
+ {
+  "name": "emSign Root SMIME CA - G1",
+  "file": "rootsmimecag1.crt",
+  "sha256_fingerprint": "47911bc8f32a11b029e0bb10a348b459404b87731b870a2f3fa97b4705dc4c25"
+ },
+ {
+  "name": "emSign SMIME CA - G1",
+  "file": "emSignSMIMECRCAG1.crt",
+  "sha256_fingerprint": "b9e2588e93b5e53617b842e6ed34854ee46ba3d6721ec45dc650ce4439f514be"
+ },
+ {
+  "name": "emSign Root SMIME CA - G3",
+  "file": "rootsmimecag3.crt",
+  "sha256_fingerprint": "f76a0d440c418dc5b362be8e11e0a5d06023f4396093e4f455827bf55153d8a4"
+ },
+ {
+  "name": "emSign SMIME CA - G3",
+  "file": "emSignSMIMECAG3.crt",
+  "sha256_fingerprint": "30444f40cac26fff497b1cd00ddf4d81453a8a176272cc34abe35fd564602b1b"
+ },
+ {
+  "name": "emSign Root TLS CA - G1",
+  "file": "roottlscag1.crt",
+  "sha256_fingerprint": "cef71e70b7c29addf6c30cd19e614b38fd5f02a435a0eeddd0087e183d101a51"
+ },
+ {
+  "name": "emSign TLS CA - G1",
+  "file": "emSignTLSCAG1.crt",
+  "sha256_fingerprint": "de029e40f6bb851da4b804c65121d8535084fdf6b3b47ddf7e94b4e46a6c3437"
+ },
+ {
+  "name": "EM DV TLS CA - G2A-1",
+  "file": "EMDVTLSCAG2A1.crt",
+  "sha256_fingerprint": "3f13597d3355d341bd09328aee567d7f4e002d9919b986f9962daff197ea75d1"
+ },
+ {
+  "name": "EM DV TLS CA - G2B",
+  "file": "EMDVTLSCAG2B.crt",
+  "sha256_fingerprint": "829ec444b8be3dfd2d030a0d9e7a1d0dd2a3c2c325d39589c27ac9a065bae793"
+ },
+ {
+  "name": "EM DV TLS CA - G2C",
+  "file": "EMDVTLSCAG2C.crt",
+  "sha256_fingerprint": "0427ea3cb4a7b4cb205e77a7b166d332bedb8e8ef469bc5e883169c8d0ac876d"
+ },
+ {
+  "name": "EM OV TLS CA - G2A-1",
+  "file": "EMOVTLSCAG2A1.crt",
+  "sha256_fingerprint": "291804ec866837cd5af5f4d652f1dcc79bec622d4f9bf4870e5e4d8639df3ad4"
+ },
+ {
+  "name": "EM OV TLS CA - G2B",
+  "file": "EMOVTLSCAG2B.crt",
+  "sha256_fingerprint": "6a7a93861982b664001710a0efd04c8a72f6a23e252b280911797e0bf1bd9012"
+ },
+ {
+  "name": "EM OV TLS CA - G2C",
+  "file": "EMOVTLSCAG2C.crt",
+  "sha256_fingerprint": "de767792e870bd32f331029fc89dc24c53f9df970dc70f1ea30cf29db3f94ba9"
+ },
+ {
+  "name": "EM EV TLS CA - G2A-1",
+  "file": "EMEVTLSCAG2A1.crt",
+  "sha256_fingerprint": "684b11e56ab72502b75daca1cd009e3dd4beab3ac1fe448902d272766cca797e"
+ },
+ {
+  "name": "EM EV TLS CA - G2B",
+  "file": "EMEVTLSCAG2B.crt",
+  "sha256_fingerprint": "e072b30d7f5b8bcf0080e51d6cc7765767072db2319e9bb1cd3d02a086898750"
+ },
+ {
+  "name": "EM EV TLS CA - G2C",
+  "file": "EMEVTLSCAG2C.crt",
+  "sha256_fingerprint": "c3bc2b480fb1a1ab4d0ba1ed6c7b53e096447045733620991a32d6798d77aa20"
+ },
+ {
+  "name": "InCommon Intermediate CA - DVG2C",
+  "file": "EEEMIncommonDVG2C.crt",
+  "sha256_fingerprint": "830905812307df14c3d9d71b9a5a83247940857dd20bf6d67f6493d2070da649"
+ },
+ {
+  "name": "InCommon Intermediate CA - OVG2C",
+  "file": "EEEMIncommonOVG2C.crt",
+  "sha256_fingerprint": "ba02f2f97ba481d19ed4906bab5602a9ce1cce5d1f362eb5ec4f9d828ef09ffc"
+ },
+ {
+  "name": "InCommon Intermediate CA - EVG2C",
+  "file": "EEEMIncommonEVG2C.crt",
+  "sha256_fingerprint": "a83559d892f4692da9a088a1b759773015d7aa6fb2b50b18c5f9f89cc27631e1"
+ },
+ {
+  "name": "InCommon RSA IGTF Server CA 4",
+  "file": "EEEMIncommonIGTFOVG2C.crt",
+  "sha256_fingerprint": "f1a78e13d7ab31072e223918d257b541010ad93ae6d39f3d74a0d8b2ee4c3e7d"
+ },
+ {
+  "name": "emSign Root TLS CA - G3",
+  "file": "roottlscag3.crt",
+  "sha256_fingerprint": "7dd78d5f4f13459a83dff9abbba62edbaf6f2d102bf257fd712f4d9f2746ed8d"
+ },
+ {
+  "name": "emSign TLS CA - G3",
+  "file": "emSignTLSCAG3.crt",
+  "sha256_fingerprint": "04e6dea261b8720e0525e9da23282100352bdebc119cfc3dbd812c3d68a2bcdd"
+ },
+ {
+  "name": "EM DV TLS CA - G3A-1",
+  "file": "EMDVTLSCAG3A1.crt",
+  "sha256_fingerprint": "4896d51f6537a5326272c412bc75990e15d4f5ecdc2946c19776923b8e169e93"
+ },
+ {
+  "name": "EM DV TLS CA - G3B",
+  "file": "EMDVTLSCAG3B.crt",
+  "sha256_fingerprint": "42c4accd12c4f59597925e1a08a7a90102608543809308d50ec427e118ba1493"
+ },
+ {
+  "name": "EM DV TLS CA - G3C",
+  "file": "EMDVTLSCAG3C.crt",
+  "sha256_fingerprint": "0164d7ceae5bb909c272af151ff44b1177ae9b47d9424b94f1d9558c30934d19"
+ },
+ {
+  "name": "EM OV TLS CA - G3A-1",
+  "file": "EMOVTLSCAG3A1.crt",
+  "sha256_fingerprint": "259ff0963a0665bf40d92e05e95b960ccb423dbd117482ae647bc7fd5f5ce644"
+ },
+ {
+  "name": "EM OV TLS CA - G3B",
+  "file": "EMOVTLSCAG3B.crt",
+  "sha256_fingerprint": "98b896625c0c230adeec3eb2cf6aad5001ecf9156a68644e82374ce5833bc25b"
+ },
+ {
+  "name": "EM OV TLS CA - G3C",
+  "file": "EMOVTLSCAG3C.crt",
+  "sha256_fingerprint": "cb6e15165ac802e9b3f993f16c25d41f4e81c21ebde71ae1b012ac00bf9c7c3f"
+ },
+ {
+  "name": "EM EV TLS CA - G3A-1",
+  "file": "EMEVTLSCAG3A1.crt",
+  "sha256_fingerprint": "ba0a3da706f47dac1a9c33c4ee1e4d86b726ef48e70d4319f3c949ec673a1975"
+ },
+ {
+  "name": "EM EV TLS CA - G3B",
+  "file": "EMEVTLSCAG3B.crt",
+  "sha256_fingerprint": "e7568fe6e12331f4fd7de61da4c7559d0f8eb192a218d4741a3ba75184333838"
+ },
+ {
+  "name": "EM EV TLS CA - G3C",
+  "file": "EMEVTLSCAG3C.crt",
+  "sha256_fingerprint": "432ec25f0d28de9006d97bf752f17bbb2cd41f669933fcb072d9a1148d0261f3"
+ },
+ {
+  "name": "InCommon Intermediate CA - DVG3C",
+  "file": "EEEMIncommonDVG3C.crt",
+  "sha256_fingerprint": "3460c02f0b4b06c2739cb0de17b41062b94515d837652aebff77ae87e0930cff"
+ },
+ {
+  "name": "InCommon Intermediate CA - OVG3C",
+  "file": "EEEMIncommonOVG3C.crt",
+  "sha256_fingerprint": "566b3af3cb6663a9f9e21eef820889c2d1a4ea2f7df0b7bb0d5060249870fa08"
+ },
+ {
+  "name": "InCommon Intermediate CA - EVG3C",
+  "file": "EEEMIncommonEVG3C.crt",
+  "sha256_fingerprint": "5f2f050f9cdd928fe50102244733cba7ea72204d9a7686949ce59e402ad1aab9"
+ },
+ {
+  "name": "emSign Root TSA CA - G2",
+  "file": "roottsacag2.crt",
+  "sha256_fingerprint": "1997770a5633fb6d0440abf7d7e87e15d795f094f8c2959dadb00e785866bf48"
+ },
+ {
+  "name": "emSign TSA CA - G2",
+  "file": "emSignTSACRCAG2.crt",
+  "sha256_fingerprint": "d4317853d206e7c3365abc631df8bb409514f2a41b01a4601e2f6737bccb1457"
+ },
+ {
+  "name": "emSign Root TSA CA - G3",
+  "file": "roottsacag3.crt",
+  "sha256_fingerprint": "75d2ce75979cf2a43b172c9f89f733dda2136031db4bbf3698b053714c077155"
+ },
+ {
+  "name": "emSign TSA CA - G3",
+  "file": "emSignTSACAG3.crt",
+  "sha256_fingerprint": "7d9e3951568a20ef05b4880fffb41d2e61aaa7401a7e67c19a3b9c71503e5705"
+ },
+ {
+  "name": "emSign Trusted Root CA - C4",
+  "file": "TrustedRootCAC4.crt",
+  "sha256_fingerprint": "c626090fd48ddbf2eee327e6a3d2ca78bd350c1faf0ceff015d834c3bd176ab0"
+ },
+ {
+  "name": "SoftNet Secure Signing CA - C4",
+  "file": "softnetsecuresignc4.crt",
+  "sha256_fingerprint": "8a523cfea032474ef82a287b1b9cbc5c38764f30956591645f7a5b86876ae3b2"
+ },
+ {
+  "name": "emSign Trusted Issuing CA - C4",
+  "file": "trustedissuingcac4.crt",
+  "sha256_fingerprint": "979ec35088d40bcf6a1e4e662c0077110e04f6d4afa3b41622bde534038bd26d"
+ },
+ {
+  "name": "emSign Issuing CA IGTF - C4",
+  "file": "emigtfc4.crt",
+  "sha256_fingerprint": "4b13287dc4f1d209d960787a645ad49d8ee2f926bda1f308e32a77c660b789b1"
+ },
+ {
+  "name": "emSign Trusted Root CA - C5",
+  "file": "TrustedRootCAC5.crt",
+  "sha256_fingerprint": "be0c7a1e9ed59990c3060095c2d6a9fd55a6e9448728f3235c7c3c0108fa2f43"
+ },
+ {
+  "name": "emSign Issuing CA IGTF - C5",
+  "file": "emigtfc5.crt",
+  "sha256_fingerprint": "aa2ff607b801cc1d885737c50d27dc2b64cbda066e4c47542d05794cd7d9d0ac"
+ },
+ {
+  "name": "emSign Issuing CA IGTF - C5 - 1",
+  "file": "4C7.crt",
+  "sha256_fingerprint": "9830b5124626a99797f4b95a55144771c74a3bc3ec90430f639e0f961e75b61f"
+ },
+ {
+  "name": "AECB Issuing CA - C5",
+  "file": "aecbc5.crt",
+  "sha256_fingerprint": "b3bd7b85fd0315d3c099f0baaeec567090ac24b9e3e9edeaaf0149ea2a3a4a6a"
+ },
+ {
+  "name": "Kenya Root CA 2022",
+  "file": "kenyaRootCA2022.crt",
+  "sha256_fingerprint": "7e79cc080c64c0440ebeef93c58deeaa7f26856437eeec1f11405a2be9ddf0a4"
+ },
+ {
+  "name": "emSign Kenya CA - C1",
+  "file": "emSignKencyaCAC1.crt",
+  "sha256_fingerprint": "a465b82318ac9b2d42d48f4b4e973c06d8f61d616128adc8ee96679bfdf01478"
+ },
+ {
+  "name": "eMudhra Kenya Secure Signing CA - C4",
+  "file": "eMudhraKenyaSecureSigningCAC4.crt",
+  "sha256_fingerprint": "5917ced3887402088fb8384487eb71be060074112e181cbc2377591fd2914bc2"
+ },
+ {
+  "name": "eMudhra Kenya Document Signing CA - C1",
+  "file": "eMudhraKenyaDocumentSigningCAC1CS.crt",
+  "sha256_fingerprint": "274d7907eca64aa5e71f067aee7df9d6423fabd62acf6b38d5056f3305555382"
+ },
+ {
+  "name": "CCA Mauritius 2019",
+  "file": "ccaMauritius2019.cer",
+  "sha256_fingerprint": "0b110ba3791e18dda8fd8f56e182f288b68be77cb919d4bafb815a0043468256"
+ },
+ {
+  "name": "eMudhra Mauritius CA 2022",
+  "file": "eMudhraMauritiusCA2022.crt",
+  "sha256_fingerprint": "929bd0a37f9a553756827c59a3221440d2d6eebee1f7dd7b0ab0e5b53d7eedf2"
+ },
+ {
+  "name": "eMudhra Mauritius Document Signing CA - C1",
+  "file": "eMudhraMauritiusDocumentSigningCA-C1.crt",
+  "sha256_fingerprint": "f5a55e7e6fa75b015b4c644945e344243ced1eda6d30378aa63073861cc3d911"
+ },
+ {
+  "name": "eMudhra Mauritius Secure Signing CA - C4",
+  "file": "eMudhraMauritiusSecureSigningCA-C4.crt",
+  "sha256_fingerprint": "50dce096e27efda860cb11bf5be35e1819c7445bf1767b880bf20c578642501e"
+ }
+]

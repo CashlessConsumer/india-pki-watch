@@ -26,13 +26,25 @@ while read -r c; do
 done < "$TMP/certs.list"
 [ "$fail" = 0 ] && echo "all live certs match published fingerprints"
 echo "snapshot: $SNAP"
+printf '%s\n' "$(tr '/' '_' < "$TMP/certs.list")" | LC_ALL=C sort -u > "$TMP/current.names"
+awk '$2 ~ /^certs\// { sub(/^certs\//, "", $2); print $2 }' "$SNAP/SHA256SUMS.txt" | LC_ALL=C sort -u > "$TMP/snapshot.names"
+while IFS= read -r name; do
+  [ -n "$name" ] || continue
+  echo "NEW FILE: $name"
+  fail=1
+done < <(comm -13 "$TMP/snapshot.names" "$TMP/current.names")
+while IFS= read -r name; do
+  [ -n "$name" ] || continue
+  echo "REMOVED FILE: $name"
+  fail=1
+done < <(comm -23 "$TMP/snapshot.names" "$TMP/current.names")
 changed=0
 while read -r c; do
   name="$(echo "$c" | tr '/' '_')"
   [ -f "$TMP/certs/$name" ] || continue
   exp="$(grep -E "certs/$name\$" "$SNAP/SHA256SUMS.txt" | cut -d' ' -f1 || true)"
   got="$(sha256sum "$TMP/certs/$name" | cut -d' ' -f1)"
-  if [ -n "$exp" ] && [ "$exp" != "$got" ]; then echo "BYTE CHANGE vs snapshot: $c"; changed=1; fi
+  if [ -n "$exp" ] && [ "$exp" != "$got" ]; then echo "BYTE CHANGE vs snapshot: $c"; changed=1; fail=1; fi
 done < "$TMP/certs.list"
-[ "$changed" = 0 ] && echo "MATCH: all certs byte-identical to $SNAP"
-exit 0
+[ "$changed" = 0 ] && [ "$fail" = 0 ] && echo "MATCH: all certs byte-identical to $SNAP"
+exit "$fail"

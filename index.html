@@ -45,7 +45,7 @@
   <table>
     <tr><th>Source</th><th>What</th><th>Snapshot</th></tr>
     <tr><td><code>cca-gov-in/</code></td><td>CCA India root certificates page — the national root (<code>CCA India 2022</code>, <code>CCA India 2022 SPL</code>)</td><td>2026-10-30 (2 certs)</td></tr>
-    <tr><td><code>emsign-repository/</code></td><td>Full corpus of the eMudhra/emSign public repository — every cert the CA publishes, with its own fingerprints as cross-check</td><td>2026-10-30 (116 certs)</td></tr>
+    <tr><td><code>emsign-repository/</code></td><td>Full corpus of the eMudhra/emSign public repository — every cert the CA publishes, with its own fingerprints as cross-check</td><td>2026-11-02 (131 certs; 15 newly listed)</td></tr>
     <tr><td><code>idrbt-ca/</code></td><td>IDRBT CA — <strong>unreachable</strong> (see findings)</td><td>status note only</td></tr>
     <tr><td><code>nic-ca/</code></td><td>NIC CA — candidate; no public endpoint located yet</td><td>—</td></tr>
   </table>
@@ -57,7 +57,7 @@
     <tr><td>CCA India 2022 SPL<br><span class="muted">serial 628281C6…, RSA-4096, valid 2022→2042</span></td><td class="hash">6e92017ece0e2e752a59b37c0ebf0fb958311cc585deda1fdf12790eb99b3caf</td></tr>
     <tr><td>emSign ECC Root CA - G3<br><span class="muted">the compromised-chain root; matches eMudhra's published fingerprint</span></td><td class="hash">86a1ecba089c4a8d3bbe2734c612ba341d813e043cf9e8a862cd5c57a36bbe6b</td></tr>
   </table>
-  <p class="muted">All 116 emSign-corpus certs verified against the SHA-256 fingerprints eMudhra itself publishes; CCA files captured with <code>Last-Modified: 17 Sep 2025 12:06:51 GMT</code> at fetch time.</p>
+  <p class="muted">All 131 emSign-corpus certs verified against the SHA-256 fingerprints eMudhra itself publishes; 15 subordinate CA certificates are newly listed versus 2026-10-30, while the prior 116 certs remain byte-identical. CCA files captured with <code>Last-Modified: 17 Sep 2025 12:06:51 GMT</code> at fetch time.</p>
 
   <h2>Findings already on record</h2>
   <div class="card warn">
@@ -69,14 +69,17 @@
   <div class="card finding">
     <strong>Provenance closure achieved.</strong> The intermediate captured in the wild from <code>.bank.in</code> TLS handshakes is byte-identical to the repository copy; the TrustCheck app's bundled G3 fixture decodes to the same root archived here. One chain of custody, three independent capture paths.
   </div>
+  <div class="card warn">
+    <strong>15 certificates newly listed by emSign.</strong> The 2026-11-02 fetch found eight UAE QTSP and seven InCommon subordinate CA certificates, all matching the publisher's fingerprints. The 116 certificates in the 2026-10-30 corpus are byte-identical; no root changed and no prior same-subject certificate was present for comparison. These are new issuance paths under existing roots, not evidence that device trust stores or DigiLocker pins changed.
+  </div>
 
   <h2>How to verify</h2>
   <pre>git clone https://github.com/CashlessConsumer/india-pki-watch.git
 cd india-pki-watch
 sha256sum -c cca-gov-in/2026-10-30-root-certs/SHA256SUMS.txt   # needs cwd fix; see script
 bash scripts/check_ccaindia.sh     # re-fetches live certs, diffs vs latest snapshot
-bash scripts/check_emsignrepo.sh   # re-fetches all 116, checks vs published fingerprints</pre>
-  <p>Mismatch = a re-issue event. <code>git log</code> the snapshot dirs for the last-known-good bytes and diff. A weekly checker runs against this repo and opens an alert on any change — snapshots are only ever added, never edited.</p>
+bash scripts/check_emsignrepo.sh   # re-fetches all published certs, checks vs published fingerprints</pre>
+  <p>A byte mismatch can indicate a re-issue; a new or removed file is a corpus change that must be investigated separately. <code>git log</code> the snapshot dirs for the last-known-good bytes and diff. A weekly checker alerts on either condition — snapshots are only ever added, never edited.</p>
 
   <h2>What we deliberately don't collect</h2>
   <ul>

@@ -10,7 +10,7 @@ against git history. Desk: CyberOpsec. Repo: CashlessConsumer/india-pki-watch.
 | Dir | What | Status |
 | --- | --- | --- |
 | `cca-gov-in/` | CCA India 2022 root + SPL as published on cca.gov.in/root_certificate.html | watching (weekly) |
-| `emsign-repository/` | Full 116-cert corpus from repository.emsign.com (emSign/eMudhra; roots incl. incident-relevant `emSign ECC Root CA - G3`, `emSign Root TLS CA - G3`, cross-signs, EM DV/OV/EV TLS intermediates incl. the one serving .bank.in) | watching (weekly) |
+| `emsign-repository/` | Full published corpus from repository.emsign.com (131 certs as of 2026-11-02; 15 newly listed vs 2026-10-30, no prior-file changes; roots incl. incident-relevant `emSign ECC Root CA - G3`, `emSign Root TLS CA - G3`, cross-signs, EM DV/OV/EV TLS intermediates incl. the one serving .bank.in) | watching (weekly) |
 | `idrbt-ca/` | IDRBT CA — no fetchable root found; infra findings recorded | findings only, 2026-10-30 |
 | `nic-ca/` | NIC CA — no public repository endpoint located | candidate, not seeded |
 

@@ -8,12 +8,21 @@ SNAP="$(ls -d govt-apps/digilocker-android/20* 2>/dev/null | sort | tail -1)"
 [ -z "$SNAP" ] && { echo "no snapshot"; exit 2; }
 TMP="$(mktemp -d)"
 trap 'rm -rf "$TMP"' EXIT
-XAPK="$TMP/dl.xapk"
-curl -fsS -m 300 -o "$XAPK" "https://d.apkpure.com/b/XAPK/com.digilocker.android" 2>/dev/null \
-  || { echo "FETCH FAIL (apkpure) — rerun via: bash Skills/apkeep-fetch/scripts/fetch-apk.sh com.digilocker.android"; exit 2; }
-mkdir -p "$TMP/x"
-unzip -o -q "$XAPK" -d "$TMP/x"
-BASE_APK="$(ls "$TMP"/x/*.apk | head -1)"
+FETCH_DIR="$TMP/apk"
+mkdir -p "$FETCH_DIR"
+bash /home/workspace/Skills/apkeep-fetch/scripts/fetch-apk.sh -o "$FETCH_DIR" com.digilocker.android
+BUNDLE="$(find "$FETCH_DIR" -type f \( -name '*.xapk' -o -name '*.apkm' -o -name '*.apk' \) | sort | head -1)"
+[ -n "$BUNDLE" ] || { echo "FETCH FAIL (apkeep-fetch returned no APK bundle)"; exit 2; }
+mkdir -p "$TMP/x" "$TMP/b"
+case "$BUNDLE" in
+  *.apk) BASE_APK="$BUNDLE" ;;
+  *)
+    unzip -o -q "$BUNDLE" -d "$TMP/x"
+    BASE_APK="$(find "$TMP/x" -maxdepth 1 -type f -name 'com.digilocker.android.apk' -print -quit)"
+    [ -n "$BASE_APK" ] || BASE_APK="$(find "$TMP/x" -maxdepth 1 -type f -name '*.apk' | sort | head -1)"
+    [ -n "$BASE_APK" ] || { echo "FETCH FAIL (bundle contains no base APK)"; exit 2; }
+    ;;
+esac
 unzip -o -q "$BASE_APK" -d "$TMP/b"
 changed=0
 while IFS= read -r f; do
